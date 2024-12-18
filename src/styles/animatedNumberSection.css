@@ -1,0 +1,42 @@
+.animated-numbers-section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+  }
+
+  .numbers-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+
+  .number-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .number {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #007bff;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .label {
+      font-size: 1.125rem;
+      color: #666;
+    }
+  }
+}
