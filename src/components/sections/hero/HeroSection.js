@@ -9,6 +9,7 @@ import Description from "../../UI/Description";
 import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import ArrowDown from "./ArrowDown";
 
 const HeroSection = () => {
   const [formIsOpen, setFormIsOpen] = useState(false);
@@ -52,8 +53,8 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
       </BackgroundImageWrapper>
       {/* Content layer */}
-      <div className="relative z-60 sm:pt-[12.1%] pt-[20%] lg:pb-[90px] md:pb-[56px] pb-[48px]">
-        <ContentContainer>
+      <div className="relative z-60 sm:pt-[12.1%] pt-[20%] lg:pb-[64px] md:pb-[122px] pb-[48px]">
+        <ContentContainer className="relative">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={hasAnimated ? { y: 0, opacity: 1 } : {}}
@@ -72,7 +73,7 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="flex justify-start items-center gap-3 lg:mb-[78px] md:mb-[85px] mb-[28px] mt-[32px] md:flex-nowrap flex-wrap">
+              className="max-w-[70vw] flex justify-between items-center gap-3 lg:mb-[78px] md:mb-[85px] mb-[28px] mt-[32px] md:flex-nowrap flex-wrap">
               <motion.button
                 onClick={handleSubmit}
                 whileHover={{ scale: 1.03 }}
@@ -93,6 +94,7 @@ const HeroSection = () => {
               </motion.div>
             </motion.div>
           </motion.div>
+          <ArrowDown />
         </ContentContainer>
       </div>
     </motion.section>
