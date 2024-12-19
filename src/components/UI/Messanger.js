@@ -17,7 +17,7 @@ const MessengerComponent = () => {
       name: "Phone",
       icon: <img src={image4} alt="phone" />,
       color: "bg-emerald-500",
-      link: "tel:+0683853535",
+      link: "tel:+380683853535",
     },
     {
       name: "Messenger",
@@ -26,10 +26,10 @@ const MessengerComponent = () => {
       link: "https://www.facebook.com/messages/t/191383417921128",
     },
     {
-      name: "WhatsApp",
+      name: "Viber",
       icon: <img src={image1} alt="phone" />,
       color: "bg-purple-600",
-      link: "tel:+0683853535",
+      link: "viber://chat?number=+380683853535",
     },
     {
       name: "Telegram",

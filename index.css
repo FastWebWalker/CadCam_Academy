@@ -1,0 +1,52 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Inter:200,300,regular&display=swap);
+body {
+  margin: 0;
+  font-family: "Inter";
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.2px;
+}
+/* src/styles.css */
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Hide scrollbars on the entire page */
+
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Ensure padding and borders are included in element's total width */
+}
+
+html,
+body,
+#root {
+  width: 100%; /* Ensure root and body elements take full width without causing overflow */
+  overflow-x: hidden; /* Make sure overflow is hidden globally */
+}
+

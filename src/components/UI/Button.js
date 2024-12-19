@@ -83,13 +83,22 @@ const Button = ({
   return (
     <a
       href={href}
-      className={combinedClasses}
+      className="flex justify-between items-center border-[0.5px] border-white rounded-[30px] "
       target="_blank"
       rel="noopener noreferrer">
-      <span>{children}</span>
-      {withoutArrow ? "" : <ArrowIcon variant={variant} />}
+      <div className={combinedClasses}>
+        <span>{children}</span>
+      </div>
+      {withoutArrow ? (
+        ""
+      ) : (
+        <div className="p-[8px] pl-0">
+          <ArrowIcon variant={variant} />
+        </div>
+      )}
     </a>
   );
 };
 
 export default Button;
+

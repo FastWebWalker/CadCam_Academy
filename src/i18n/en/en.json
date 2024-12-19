@@ -1,0 +1,176 @@
+{
+  "header": {
+    "navigation": {
+      "aboutUs": "About Us",
+      "services": "Services",
+      "equipment": "equipment",
+      "ourTeam": "our team",
+      "gallery": "gallery"
+    },
+    "buttons": {
+      "getInTouch": "get in touch"
+    }
+  },
+  "heroSection": {
+    "description1": "Unlock the potential of your smile with our advanced solutions for dental laboratories, orthopedics and implantology.",
+    "description2": "Don't waste time!\nOrder a call now and find out all the details."
+  },
+  "buttons": {
+    "ourStore": "Our Store",
+    "orderCall": "Order A Call"
+  },
+  "titleBlock": {
+    "mobileTitle": "Global leaders and experts in dental field",
+    "desktopTitles": {
+      "line1": "global leaders",
+      "line2": "and experts",
+      "line3": "in dental field"
+    }
+  },
+
+  "numbersSection": {
+    "experience": "Years of experience in orthopedic dentistry",
+    "cases": "Successfully executed cases",
+    "partners": "Partners who cooperate with us",
+    "customers": "Satisfied customers"
+  },
+
+  "chooseSection": {
+    "title": "Why Choose Us?",
+    "items": [
+      {
+        "title": "Innovative Dental Solutions",
+        "description": "Stay ahead of the curve with cutting-edge technologies and innovative techniques. Our team continually researches the latest advancements in dental technology to provide high-quality, long-lasting solutions for dental laboratories, implantology, and prosthetics."
+      },
+      {
+        "title": "Proven Expertise and Experience",
+        "description": "With years of industry experience, Smile Energy Group has built a reputation for excellence. Our specialists have extensive knowledge in dental prosthetics and implants, ensuring that each solution is tailored to the specific needs of the patient."
+      },
+      {
+        "title": "Personalized Client Support",
+        "description": "We believe in providing exceptional customer service, offering personalized solutions and continuous support to every client. Our dedicated team works closely with dental professionals to meet their specific requirements, whether it's providing advanced prosthetics on complex implant procedures."
+      },
+      {
+        "title": "Comprehensive Range of Services",
+        "description": "Smile Energy Group offers a complete range of services. Our multidisciplinary approach ensures that we can handle every aspect of dental care, making us your one-stop solution for all needs related to dental laboratories, implants, and orthopedic prostheses."
+      }
+    ]
+  },
+  "trustedSection": {
+    "title": "Trusted partners",
+    "description": "Thanks to its experience, skills, and high qualifications, we will become a reliable partner for you and will offer exactly the solutions you and your patients need."
+  },
+  "reviewsSection": {
+    "title": "REVIEWS OF OUR CLIENTS",
+    "reviews": [
+      {
+        "name": "Hrynyk Rustam",
+        "position": "Dentist, Lviv",
+        "quote": "The most important thing in the high-quality work of an orthopedist is the high-quality work of a technician... Thank you to Serhiy Hrybovskiy's laboratory!"
+      },
+      {
+        "name": "Ewan Bramley",
+        "position": "Dentist, United Kingdom",
+        "quote": "Thank you Serhiy! I am so grateful to have met you and found your fantastic dental lab. All the best to you and your family for 2020. Let's make it a fantastic year for us both."
+      },
+      {
+        "name": "Pidhoretskiy Ruslan",
+        "position": "Dentist, Kyiv",
+        "quote": "A really cool laboratory. Laba, which is constantly developing, instantly responds to a call, is always in touch. All work is done on time, according to the given terms... Pleasant cooperation that has been going on for years."
+      },
+      {
+        "name": "Hubal Myroslav",
+        "position": "Dentist, Khust",
+        "quote": "I wanted to work with a digital laboratory. People always hear me here. Everything was done in the promised time."
+      }
+    ]
+  },
+  "storeSection": {
+    "title": "Our online store - SeTrade",
+    "description": "Every smile is an expression of personality and careful attitude to health. In this regard, high-quality dental materials and dental equipment are important components of the process of their creation. SeTrade online store of dental materials is a look at the new generation of dentistry. In this context, it embodies the concept of accessibility of the most modern means, creating opportunities for professional development and achieving the highest standards in the field of oral health.",
+    "button": "Our Store"
+  },
+
+  "popularSection": {
+    "title": "Popular products",
+    "description": "The following materials are the most popular among the presented products",
+    "products": [
+      {
+        "title": "AmeraLabs DMD-21 LED Sand",
+        "description": "A real miracle for creating dental models. Designed and manufactured to the highest standards, it offers impeccable precision and stability. Its unique properties ensure outstanding quality of reproduction, making it one of the most effective materials for creating dental models."
+      },
+      {
+        "title": "Slim Pad Pro - Build Up",
+        "description": "Takes a special place among ceramic ones products. It opens up new opportunities for dentists, giving them a wide palette for mixing ceramics that provides not only an impeccable result, but also incredible simplicity in work."
+      }
+    ],
+    "button": "Read More"
+  },
+  "founderSection": {
+    "name": "Serhiy Hrybovskyy",
+    "title": "Founder of the company",
+    "description": "Each technician has an original approach to work that is unique to him or her. This reflects the love for their work in working on customer orders. At all stages of cooperation with the dentist, clients receive full information support of the highest class. We treat many patients throughout their lives. We advise, recommend, consult and help.",
+    "labsTitle": "Our directions:"
+  },
+  "gallerySection": {
+    "title": "Gallery of works",
+    "description": "Check out all our works and make sure of our professionalism!"
+  },
+  "footerSection": {
+    "description": {
+      "line1": "Global expert in dental laboratories, orthopedics,",
+      "line2": "and prosthesis on implants"
+    },
+    "contactUs": "Do you have any questions? Contact us!",
+    "address": {
+      "title": "Address",
+      "content": "43 Pasichna str., Lviv, Ukraine"
+    },
+    "phone": {
+      "title": "Phone number",
+      "content": "+38(068)-385-35-35"
+    },
+    "email": {
+      "title": "Email",
+      "content": "smilenergygroup.ua@gmail.com"
+    },
+    "page": {
+      "title": "Page",
+      "links": {
+        "aboutUs": "About Us",
+        "services": "Services",
+        "products": "Products",
+        "reviews": "Reviews"
+      }
+    },
+    "ourLaboratories": {
+      "title": "Our Laboratories:",
+      "labs": {
+        "cadCamEnergy": "CadCam Energy",
+        "contour": "Contour",
+        "senergy": "Senergy",
+        "cadStudio": "Cad Studio"
+      }
+    },
+    "media": {
+      "title": "Media",
+      "socials": {
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "linkedIn": "LinkedIn",
+        "telegram": "Telegram"
+      }
+    },
+    "orderCallButton": "Order A Call",
+    "copyright": "Smile Energy Group 2024. All Rights Reserved."
+  },
+  "notFound": {
+    "title": "Oops! Something went wrong...",
+    "description": "Go to the main page for the information you need",
+    "button": "Back to Home"
+  },
+  "formModal": {
+    "title": "Do you have any questions?",
+    "description": "Leave your details and we will definitely contact you!"
+  }
+}

@@ -1,15 +1,20 @@
-import "./App.css";
-import HeroSection from "./components/sections/hero/HeroSection";
-import { BrowserRouter } from "react-router-dom";
-import Header from "./components/sections/Header";
+// import NotFound from "./pages/not-found";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import CadCamEnergy from "./pages/CadCamEnergy";
+import Layout from "./components/Layout";
 
-function App() {
+const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
-      <HeroSection />
-    </BrowserRouter>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<CadCamEnergy />} />
+          {/* <Route path="*" element={<NotFound />} /> Catch-all route */}
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;

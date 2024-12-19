@@ -1,4 +1,5 @@
 import logo from "../../../images/sections/header/logo.svg";
+
 export default function Logo({ className }) {
   return (
     <div className="flex-shrink-0  mr-4 last:mr-0">

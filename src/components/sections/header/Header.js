@@ -5,7 +5,6 @@ import Logo from "./Logo";
 import SwitchButton from "../../UI/SwitchButton";
 import Button from "../../UI/Button";
 import { useTranslation } from "react-i18next";
-// import FormModal from "../hero/FormModal";
 import BurgerButton from "./BurgerButton";
 import { useCallback } from "react";
 
@@ -46,10 +45,11 @@ const Header = () => {
 
   // Navigation items with their corresponding section IDs
   const navItems = [
+    { text: t("header.navigation.aboutUs"), sectionId: "aboutUs" },
     { text: t("header.navigation.services"), sectionId: "services" },
-    { text: t("header.navigation.products"), sectionId: "products" },
-    { text: t("header.navigation.reviews"), sectionId: "reviews" },
-    { text: t("header.navigation.aboutUs"), sectionId: "about-us" },
+    { text: t("header.navigation.equipment"), sectionId: "equipment" },
+    { text: t("header.navigation.ourTeam"), sectionId: "ourTeam" },
+    { text: t("header.navigation.gallery"), sectionId:"gallery" },
   ];
 
   const scrollToSection = (sectionId) => {
@@ -73,14 +73,14 @@ const Header = () => {
 
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-10 transition-all duration-200 ${
-        isScrolled ? "bg-[#111111]" : "bg-transparent"
+      className={`fixed top-0 left-0 right-0 z-10 md:border-b-[0.5px] border-[#979797] transition-all duration-200 ${
+        isScrolled ? "bg-[#111111] border-none" : "bg-transparent"
       }`}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}>
       <ContentContainer>
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between xxl:h-[88px] xl:h-[72px] h-[64px]">
           <Logo />
 
           {/* Desktop Navigation */}
@@ -113,6 +113,7 @@ const Header = () => {
             </motion.button>
           </div>
 
+       
           <BurgerButton isOpen={isMenuOpen} toggleMenu={toggleMenu} />
         </div>
 
