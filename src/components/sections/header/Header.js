@@ -145,7 +145,7 @@ const Header = () => {
                 onClick={handleSubmit}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}>
-                <Button className="uppercase z-50">
+                <Button variant="red-white" className="uppercase z-50">
                   {t("header.buttons.getInTouch")}
                 </Button>
               </motion.button>
