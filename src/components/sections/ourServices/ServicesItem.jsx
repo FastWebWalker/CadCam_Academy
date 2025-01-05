@@ -1,30 +1,3 @@
-// import React from "react";
-// import Description from "../../UI/Description";
-
-// const ServicesItem = ({ number, title, description, image }) => {
-//   return (
-//     <div className="flex gap-8 items-center justify-between border-t border-[#979797] pt-8 mb-[24px] text-[#111111]">
-//       <div className="flex items-center justify-start gap-[72px]">
-//         <span className="text-[32px] flex justify-center items-center">
-//           {number}
-//         </span>
-//         <h2 className="text-[44px] font-normal">{title}</h2>
-//       </div>
-
-//       <Description className={"max-w-[435px]"}>{description}</Description>
-//       {/* <div className="flex gap-[73px] justify-between items-center"></div> */}
-//       <div className="">
-//         <img
-//           src={image}
-//           alt="CAD Modeling Example"
-//           className="w-[213px] h-auto grayscale"
-//         />
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ServicesItem;
 
 import React from "react";
 

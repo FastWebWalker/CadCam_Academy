@@ -5,6 +5,7 @@
 
 import HeroSection from "../components/sections/hero/HeroSection";
 import NumbersSection from "../components/sections/numbers/NumbersSection";
+import OurEquipment from "../components/sections/ourEquipment/OurEquipment";
 import OurServices from "../components/sections/ourServices/ourServices";
 import OurTeam from "../components/sections/ourTeam/OurTeam";
 // import PopularSection from "../components/sections/popular/PopularSection";
@@ -22,6 +23,7 @@ export default function CadCamEnergy() {
       <WhyChooseUs />
       <OurServices />
       <OurTeam />
+      <OurEquipment />
       {/* <ChooseSection />
       <TrustedSection />
       <ReviewsSection />

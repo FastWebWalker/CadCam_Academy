@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-const NavigationArrow = ({ isLeft = true }) => {
+const NavigationArrow = ({ isLeft = true, className }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className="cursor-pointer"
+      className={`cursor-pointer ${className} p-[26px] border-[#979797] border-[1px] rounded-full hover:border-[#BA0315]`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}>
       <svg
@@ -20,14 +20,14 @@ const NavigationArrow = ({ isLeft = true }) => {
         }}>
         <path
           d="M41.1667 26L10.8334 26"
-          stroke={isHovered ? "#FF0000" : "#BA0315"}
+          stroke={isHovered ? "#BA0315" : "#ffffff"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M26 41.1668L10.8333 26.0002L26 10.8335"
-          stroke={isHovered ? "#FF0000" : "#BA0315"}
+          stroke={isHovered ? "#BA0315" : "#ffffff"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
