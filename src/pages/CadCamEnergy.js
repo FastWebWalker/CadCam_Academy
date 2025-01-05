@@ -9,7 +9,7 @@ import OurEquipment from "../components/sections/ourEquipment/OurEquipment";
 import OurServices from "../components/sections/ourServices/ourServices";
 import OurTeam from "../components/sections/ourTeam/OurTeam";
 // import PopularSection from "../components/sections/popular/PopularSection";
-// import ReviewsSection from "../components/sections/reviews/ReviewsSection";
+import ReviewsSection from "../components/sections/reviews/ReviewsSection";
 // import StoreSection from "../components/sections/store/StoreSection";
 import TrustedSection from "../components/sections/trusted/TrustedSection";
 import WhyChooseUs from "../components/sections/whyChooseUs/whyChooseUs";
@@ -24,6 +24,7 @@ export default function CadCamEnergy() {
       <OurServices />
       <OurTeam />
       <OurEquipment />
+      <ReviewsSection />
       {/* <ChooseSection />
       <TrustedSection />
       <ReviewsSection />

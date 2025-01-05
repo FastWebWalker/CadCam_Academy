@@ -3,7 +3,7 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "../i18n/i18n";
 import { Outlet } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
-
+import Footer from "./sections/footer/Footer";
 
 export default function Layout() {
   const isMobile = useMediaQuery("(max-width: 500px");
@@ -13,7 +13,7 @@ export default function Layout() {
         {/* {!isMobile && <CustomCursor />} */}
         <Header />
         <Outlet />
-        {/* <Footer /> */}
+        <Footer />
         {/* <MessengerComponent /> */}
         {/* <Cookies /> */}
       </I18nextProvider>

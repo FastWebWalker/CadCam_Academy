@@ -7,7 +7,7 @@ import instagram from "../../../images/sections/footer/instagram.svg";
 import facebook from "../../../images/sections/footer/facebook.svg";
 import linkedIn from "../../../images/sections/footer/linkedIn.svg";
 import telegram from "../../../images/sections/footer/telegram.svg";
-import FormModal from "../hero/FormModal";
+// import FormModal from "../hero/FormModal";
 import { useState, useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -35,28 +35,6 @@ export default function Footer() {
       });
     }
   };
-
-  // useEffect(() => {
-  //   const observer = new IntersectionObserver(
-  //     ([entry]) => {
-  //       setIsVisible(entry.isIntersecting);
-  //     },
-  //     {
-  //       rootMargin: "0px",
-  //       threshold: 0.1,
-  //     }
-  //   );
-
-  //   if (footerRef.current) {
-  //     observer.observe(footerRef.current);
-  //   }
-
-  //   return () => {
-  //     if (footerRef.current) {
-  //       observer.unobserve(footerRef.current);
-  //     }
-  //   };
-  // }, []);
 
   return (
     <motion.footer
@@ -261,9 +239,9 @@ export default function Footer() {
           <p>&copy; {t("footerSection.copyright")}</p>
         </div>
       </ContentContainer>
-      {formIsOpen && (
+      {/* {formIsOpen && (
         <FormModal onSubmit={handleSubmit} onClose={handleClose} />
-      )}
+      )} */}
     </motion.footer>
   );
 }

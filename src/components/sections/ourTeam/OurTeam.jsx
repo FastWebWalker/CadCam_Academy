@@ -14,10 +14,10 @@ import image3 from "../../../images/sections/ourTeam/3.png";
 const NavigationButtons = () => {
   return (
     <div className="flex gap-[10px]">
-      <div className="custom-swiper-prev">
+      <div className="custom-swiper-prev-team">
         <NavigationArrow />
       </div>
-      <div className="custom-swiper-next">
+      <div className="custom-swiper-next-team">
         <NavigationArrow className="rotate-180" />
       </div>
     </div>
@@ -82,8 +82,8 @@ export default function OurTeam() {
           spaceBetween={72}
           slidesPerView={3}
           navigation={{
-            nextEl: ".custom-swiper-next",
-            prevEl: ".custom-swiper-prev",
+            nextEl: ".custom-swiper-next-team",
+            prevEl: ".custom-swiper-prev-team",
           }}
           autoplay={{
             delay: 3000,

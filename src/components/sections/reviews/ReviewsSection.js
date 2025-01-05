@@ -3,20 +3,34 @@ import { useInView } from "react-intersection-observer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import ContentContainer from "../../UI/ContentContainer";
-import Title from "../../UI/Title";
+import SectionHeader from "../../UI/SectionHeader";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import review1 from "../../../images/sections/reviews/image1.png";
-import review2 from "../../../images/sections/reviews/image2.png";
-import review3 from "../../../images/sections/reviews/image3.png";
-import review4 from "../../../images/sections/reviews/image4.png";
-import arrowRight from "../../../images/sections/reviews/arrow-right.svg";
-import arrowLeft from "../../../images/sections/reviews/arrow-left.svg";
+import review1 from "../../../images/sections/reviews/1.png";
+import review2 from "../../../images/sections/reviews/2.png";
+import review3 from "../../../images/sections/reviews/3.jpg";
+
 import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
+
+// Assuming NavigationArrow is defined in the same directory
+import NavigationArrow from "../../UI/NavigationArrow";
+
+const NavigationButtons = () => {
+  return (
+    <div className="flex gap-[10px]">
+      <div className="custom-swiper-prev-reviews">
+        <NavigationArrow />
+      </div>
+      <div className="custom-swiper-next-reviews">
+        <NavigationArrow className="rotate-180" />
+      </div>
+    </div>
+  );
+};
 
 export default function ReviewsSection() {
   const isLargeDesktop = useMediaQuery("(min-width:1280px)");
@@ -41,12 +55,6 @@ export default function ReviewsSection() {
       position: `${t("reviewsSection.reviews.2.position")}`,
       image: review3,
       quote: `${t("reviewsSection.reviews.2.quote")}`,
-    },
-    {
-      name: `${t("reviewsSection.reviews.3.name")}`,
-      position: `${t("reviewsSection.reviews.3.position")}`,
-      image: review4,
-      quote: `${t("reviewsSection.reviews.3.quote")}`,
     },
   ];
 
@@ -79,44 +87,23 @@ export default function ReviewsSection() {
     >
       <ContentContainer>
         <div className="relative" ref={contentRef}>
-          <div className="flex items-center justify-between lg:mb-12 md:mb-[40px] mb-[32px] flex-wrap gap-[24px]">
-            {/* Title Animation */}
-            <motion.div
-              className="text-white"
-              initial={{ opacity: 0, x: -50 }}
-              animate={
-                contentInView
-                  ? { opacity: 1, x: 0, transition: { duration: 0.6 } }
-                  : { opacity: 0, x: -50 }
-              }>
-              <Title>{t("reviewsSection.title")}</Title>
-            </motion.div>
-
-            {/* Custom Navigation Buttons */}
-            <div className="relative flex gap-[6px] justify-center items-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="cursor-pointer swiper-prev flex items-center justify-center w-20 h-10 rounded-[30px] border border-[rgba(255,255,255,0.4)] text-white hover:bg-redCustom hover:border-redCustom transition-colors duration-300">
-                <img src={arrowLeft} alt="arrow-left" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="swiper-next flex items-center justify-center w-20 h-10 rounded-[30px] cursor-pointer border border-[rgba(255,255,255,0.4)] text-white hover:bg-redCustom hover:border-redCustom transition-colors duration-300">
-                <img src={arrowRight} alt="arrow-right" />
-              </motion.button>
-            </div>
-          </div>
-
           {/* Swiper Component */}
+          <SectionHeader
+            titleFirstPart={"reviews of"}
+            titleSecondPart={"our clients"}
+            isDescription={false}
+            inView={true}
+            textIsWhite={true}
+            titlePl={40}
+            descriptionPart={<NavigationButtons />}
+          />
           <Swiper
             modules={[Navigation, Pagination, Autoplay]}
             spaceBetween={72}
             slidesPerView={slides}
             navigation={{
-              nextEl: ".swiper-next",
-              prevEl: ".swiper-prev",
+              nextEl: ".custom-swiper-next-reviews",
+              prevEl: ".custom-swiper-prev-reviews",
               enabled: true,
               hideOnClick: false,
             }}
@@ -141,7 +128,7 @@ export default function ReviewsSection() {
                     <img
                       src={review.image}
                       alt={review.name}
-                      className="w-full h-full object-cover rounded-sm"
+                      className="w-[250px] h-[196px] object-cover rounded-sm grayscale"
                     />
                   </div>
 
