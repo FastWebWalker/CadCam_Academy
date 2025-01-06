@@ -40,7 +40,7 @@ export default function OurTeam() {
   const isLargeDesktop = useMediaQuery("(min-width:1280px)");
   const isDesktop = useMediaQuery("(min-width:1024px)");
   const isTablet = useMediaQuery("(min-width:768px)");
-  const slides = isLargeDesktop ? 3 : isDesktop ? 2 : isTablet ? 1.5 : 1.2;
+  const slides = isLargeDesktop ? 3 : isDesktop ? 2 : isTablet ? 1.5 : 1.4;
   const { t } = useTranslation();
 
   const reviews = [
@@ -116,7 +116,7 @@ export default function OurTeam() {
                   <h3 className="text-[26px]">{review.name}</h3>
                   <Description>{review.position}</Description>
                 </div>
-                <div className="w-full h-[478px]">
+                <div className="w-full md:h-[478px]">
                   <img src={review.image} alt={review.name} />
                 </div>
               </div>

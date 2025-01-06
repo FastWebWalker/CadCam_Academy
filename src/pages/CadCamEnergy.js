@@ -28,9 +28,9 @@ export default function CadCamEnergy() {
       <OurTeam />
       <OurEquipment />
       <ReviewsSection />
-      {/* <OurGallery />
+      <OurGallery />
       <Questions />
-      <Interested /> */}
+      <Interested />
     </>
   );
 }

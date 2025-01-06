@@ -103,7 +103,7 @@ const InfiniteImageSlider = () => {
             <img
               src={image}
               alt={`CAD CAM Equipment ${index + 1}`}
-              className="w-[348px] h-auto object-cover"
+              className="md:w-[348px] w-[157px] h-auto object-cover"
             />
           </div>
         ))}
