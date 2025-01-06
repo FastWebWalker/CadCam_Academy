@@ -28,16 +28,9 @@ export default function CadCamEnergy() {
       <OurTeam />
       <OurEquipment />
       <ReviewsSection />
-      <OurGallery />
+      {/* <OurGallery />
       <Questions />
-      <Interested />
-      {/* <ChooseSection />
-      <TrustedSection />
-      <ReviewsSection />
-      <StoreSection />
-      <PopularSection />
-      <FounderSection />
-      <GallerySection /> */}
+      <Interested /> */}
     </>
   );
 }

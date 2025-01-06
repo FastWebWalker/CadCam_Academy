@@ -47,8 +47,54 @@ export default function MainTitleBlock() {
       variants={containerVariants}
       initial="hidden"
       animate={hasAnimated ? "visible" : "hidden"}
-      className="flex flex-col relative pb-[6.85%] ">
-      {(isTablet || isDesktop) && (
+      className="flex flex-col relative pb-[6.85%]">
+      {isTablet && (
+        <>
+          <motion.div
+            variants={textVariants}
+            className="w-full flex justify-end">
+            <Description className="text-white max-w-[350px] opacity-85 pb-[5px]">
+              - CAD/CAM milling<br></br>- 3D PRINT (ASIGA, FORMLABS)
+              <br></br>- High-quality zirkonzahn equipment
+            </Description>
+          </motion.div>
+          <>
+            <div className="flex justify-start items-center">
+              <motion.div variants={textVariants}>
+                <HeroTitle>
+                  The <span className="text-red-800">largest</span>
+                </HeroTitle>
+              </motion.div>
+            </div>
+            <div className="flex justify-between items-end gap-[20px] pl-[5%]">
+              <motion.div variants={textVariants}>
+                <HeroTitle>milling center</HeroTitle>
+              </motion.div>
+              {isDesktop && (
+                <motion.div variants={textVariants}>
+                  <Description className="text-white max-w-[350px] opacity-85 pb-[5px]">
+                    - CAD/CAM milling<br></br>- 3D PRINT (ASIGA, FORMLABS)
+                    <br></br>- High-quality zirkonzahn equipment
+                  </Description>
+                </motion.div>
+              )}
+            </div>
+            <div className="flex justify-start items-center gap-[20px] pl-[10%]">
+              <motion.div variants={textVariants}>
+                <HeroTitle>in</HeroTitle>
+              </motion.div>
+            </div>
+            <div className="flex lg:justify-between justify-start items-center pl-[15%]">
+              <motion.div variants={textVariants}>
+                <HeroTitle>
+                  <span className="text-red-800">western</span> ukraine
+                </HeroTitle>
+              </motion.div>
+            </div>
+          </>
+        </>
+      )}
+      {isDesktop && (
         <>
           <div className="flex justify-start items-center">
             <motion.div variants={textVariants}>
@@ -85,8 +131,41 @@ export default function MainTitleBlock() {
         </>
       )}
       {isMobile && (
-        <motion.div variants={textVariants}>
-          <HeroTitle>Global leaders and experts in dental field</HeroTitle>
+        <motion.div variants={textVariants} className="font-thin">
+          <>
+            <div className="flex justify-start items-center">
+              <motion.div variants={textVariants}>
+                <HeroTitle>
+                  The <span className="text-red-800">largest</span>
+                </HeroTitle>
+              </motion.div>
+            </div>
+            <div className="flex justify-between items-end gap-[20px]">
+              <motion.div variants={textVariants}>
+                <HeroTitle>milling center</HeroTitle>
+              </motion.div>
+              {isDesktop && (
+                <motion.div variants={textVariants}>
+                  <Description className="text-white max-w-[350px] opacity-85 pb-[5px]">
+                    - CAD/CAM milling<br></br>- 3D PRINT (ASIGA, FORMLABS)
+                    <br></br>- High-quality zirkonzahn equipment
+                  </Description>
+                </motion.div>
+              )}
+            </div>
+            <div className="flex justify-start items-center gap-[20px]">
+              <motion.div variants={textVariants}>
+                <HeroTitle>in</HeroTitle>
+              </motion.div>
+            </div>
+            <div className="flex lg:justify-between justify-start items-center">
+              <motion.div variants={textVariants}>
+                <HeroTitle>
+                  <span className="text-red-800">western</span> ukraine
+                </HeroTitle>
+              </motion.div>
+            </div>
+          </>
         </motion.div>
       )}
     </motion.div>

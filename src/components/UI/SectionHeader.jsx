@@ -16,7 +16,7 @@ export default function WhyChooseUs({
     <div
       className={`${
         textIsWhite === true ? "text-white" : "text-[#111111]"
-      } flex justify-between lg:items-center lg:mb-[46px] md:mb-[40px] mb-[32px] lg:flex-row [@media(max-width:1024px)]:flex-col"`}>
+      } flex flex-col gap-[24px] justify-between lg:items-center lg:mb-[46px] md:mb-[40px] mb-[32px] lg:flex-row [@media(max-width:1024px)]:flex-col"`}>
       <motion.div
         className={`lg:mb-[24px]`}
         initial={{ opacity: 0, x: -50 }}

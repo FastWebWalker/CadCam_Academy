@@ -58,8 +58,8 @@ export default function OurEquipment() {
     },
   ];
   return (
-    <section className="bg-white py-[6.75vh] text-[#111111] relative">
-      <div className="absolute bottom-0 right-0 opacity-100 z-[2]">
+    <section className="bg-white py-[6.75vh] text-[#111111] relative z-[1]">
+      <div className="absolute bottom-0 right-0 opacity-100 z-[0]">
         <img src={background} alt="background" />
       </div>
 
@@ -73,7 +73,7 @@ export default function OurEquipment() {
           titlePl={40}
           inView={true}
         />
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] gap-x-[5vw] gap-y-[6.4vh] justify-between mt-8">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] gap-x-[5vw] gap-y-[6.4vh] justify-between mt-8 z-[1]">
           {equipmentData.map((service) => (
             <EquipmentItem
               key={service.id}

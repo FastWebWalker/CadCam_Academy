@@ -47,7 +47,7 @@ export default function TrustedSection() {
           isDescription={true}
           description={t("trustedSection.description")}
           inView={inView}
-          titlePl={40}
+          titlePl={"lg:pl-[40%]"}
           textIsWhite={true}
         />
 

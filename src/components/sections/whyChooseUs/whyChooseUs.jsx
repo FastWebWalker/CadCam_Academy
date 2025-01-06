@@ -27,7 +27,7 @@ export default function WhyChooseUs() {
           }
           isDescription={true}
           inView={inView}
-          titlePl={30}
+          titlePl={"lg:pl-[25%]"}
           textIsWhite={true}
         />
 

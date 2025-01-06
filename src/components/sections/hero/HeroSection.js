@@ -60,20 +60,13 @@ const HeroSection = () => {
             animate={hasAnimated ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 1, ease: "easeOut" }}
             className="flex flex-col">
-            {/* {isTablet && (
-              <div className="w-[100%] flex justify-end items-center">
-                <Description className="text-white max-w-[350px] mb-[45px] justify-end">
-                  {t("heroSection.description1")}
-                </Description>
-              </div>
-            )} */}
             <MainTitleBlock />
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={hasAnimated ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="max-w-[70vw] flex justify-between items-center gap-3 lg:mb-[78px] md:mb-[85px] mb-[28px] mt-[32px] md:flex-nowrap flex-wrap">
+              className="lg:max-w-[70vw] max-w-full flex flex-col-reverse [@media(min-width:768px)]:flex-row  justify-between md:items-center items-start gap-3 lg:mb-[78px] md:mb-[85px] mb-[28px] mt-[32px] md:flex-nowrap flex-wrap">
               <motion.button
                 onClick={handleSubmit}
                 whileHover={{ scale: 1.03 }}

@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Description from "../../UI/Description";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
+import { useMediaQuery } from "@mui/material";
 
 import { useTranslation } from "react-i18next";
 import image1 from "../../../images/sections/ourTeam/1.png";
@@ -36,6 +37,10 @@ const NavigationButtons = () => {
 };
 
 export default function OurTeam() {
+  const isLargeDesktop = useMediaQuery("(min-width:1280px)");
+  const isDesktop = useMediaQuery("(min-width:1024px)");
+  const isTablet = useMediaQuery("(min-width:768px)");
+  const slides = isLargeDesktop ? 3 : isDesktop ? 2 : isTablet ? 1.5 : 1.2;
   const { t } = useTranslation();
 
   const reviews = [
@@ -74,7 +79,7 @@ export default function OurTeam() {
           isDescription={false}
           inView={true}
           textIsWhite={true}
-          titlePl={40}
+          titlePl={"lg:pl-[35%]"}
           descriptionPart={<NavigationButtons />}
         />
 
@@ -91,7 +96,7 @@ export default function OurTeam() {
         <Swiper
           modules={[Navigation]}
           spaceBetween={72}
-          slidesPerView={3}
+          slidesPerView={slides}
           navigation={{
             nextEl: ".custom-swiper-next-team",
             prevEl: ".custom-swiper-prev-team",
@@ -111,7 +116,7 @@ export default function OurTeam() {
                   <h3 className="text-[26px]">{review.name}</h3>
                   <Description>{review.position}</Description>
                 </div>
-                <div>
+                <div className="w-full h-[478px]">
                   <img src={review.image} alt={review.name} />
                 </div>
               </div>

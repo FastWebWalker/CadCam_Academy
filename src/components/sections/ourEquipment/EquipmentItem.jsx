@@ -1,6 +1,6 @@
 export default function EquipmentItem({ image, title }) {
   return (
-    <article className="flex flex-col items-center gap-[16px]">
+    <article className="flex flex-col items-center gap-[16px] z-[1]">
       <div className="w-[257px] h-auto">
         <img src={image} alt={title} />
       </div>
