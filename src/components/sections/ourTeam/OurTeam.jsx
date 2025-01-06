@@ -15,10 +15,21 @@ const NavigationButtons = () => {
   return (
     <div className="flex gap-[10px]">
       <div className="custom-swiper-prev-team">
-        <NavigationArrow />
+        <NavigationArrow
+          startColor={"#ffffff"}
+          endColor={"#BA0315"}
+          size={52}
+          padding={26}
+        />
       </div>
       <div className="custom-swiper-next-team">
-        <NavigationArrow className="rotate-180" />
+        <NavigationArrow
+          className="rotate-180"
+          startColor={"#ffffff"}
+          endColor={"#BA0315"}
+          size={52}
+          padding={26}
+        />
       </div>
     </div>
   );
