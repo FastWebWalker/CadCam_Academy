@@ -1,17 +1,15 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import BackgroundImageWrapper from "../../UI/BackgroundImageWrapper";
-import backgroundHero from "../../../images/sections/hero/fdcb075db3b83f2b90e9d4c681deca4f.png";
 import ContentContainer from "../../UI/ContentContainer";
 import MainTitleBlock from "./MainTitleBlock";
 import Button from "../../UI/Button";
 import Description from "../../UI/Description";
 import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
-import { Link } from "react-router-dom";
 import ArrowDown from "./ArrowDown";
 
-const HeroSection = () => {
+const HeroSection = ({ image }) => {
   const [formIsOpen, setFormIsOpen] = useState(false);
   const isTablet = useMediaQuery("(min-width:625px) and (max-width:1023px)");
   const isMobile = useMediaQuery("(max-width:767px)");
@@ -30,14 +28,6 @@ const HeroSection = () => {
     setHasAnimated(true);
   }
 
-  const handleSubmit = () => {
-    setFormIsOpen(true);
-  };
-
-  const handleClose = () => {
-    setFormIsOpen(false);
-  };
-
   return (
     <motion.section
       ref={sectionRef}
@@ -47,7 +37,7 @@ const HeroSection = () => {
       className="relative">
       {/* Background layer */}
       <BackgroundImageWrapper
-        imageUrl={backgroundHero}
+        imageUrl={image}
         className="h-screen min-w-screen grayscale absolute inset-0 z-0"
         style={{ backgroundPosition: "center 61%" }}>
         <div className="absolute inset-0 bg-black bg-opacity-60"></div>
@@ -68,7 +58,6 @@ const HeroSection = () => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="lg:max-w-[70vw] max-w-full flex flex-col-reverse [@media(min-width:768px)]:flex-row  justify-between md:items-center items-start gap-3 lg:mb-[78px] md:mb-[85px] mb-[28px] mt-[32px] md:flex-nowrap flex-wrap">
               <motion.button
-                onClick={handleSubmit}
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.95 }}>
                 <Button withoutArrow={isMobileSmall} variant="white-white">
@@ -87,8 +76,8 @@ const HeroSection = () => {
               </motion.div>
             </motion.div>
           </motion.div>
-          <ArrowDown />
         </ContentContainer>
+        <ArrowDown />
       </div>
     </motion.section>
   );

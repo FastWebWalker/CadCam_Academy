@@ -20,13 +20,29 @@ import { useTranslation } from "react-i18next";
 import NavigationArrow from "../../UI/NavigationArrow";
 
 const NavigationButtons = () => {
+  const isMobile = useMediaQuery("(max-width: 450px)");
   return (
     <div className="flex gap-[10px]">
       <div className="custom-swiper-prev-reviews">
-        <NavigationArrow />
+        <NavigationArrow
+          startBorderColor={"border-[#979797]"}
+          endBorderColor={"border-[#BA0315]"}
+          startColor={"#979797"}
+          endColor={"#BA0315"}
+          size={isMobile ? 34 : 52}
+          padding={"lg:p-[26px] md:p-[14px] p-[12.5px]"}
+        />
       </div>
       <div className="custom-swiper-next-reviews">
-        <NavigationArrow className="rotate-180" />
+        <NavigationArrow
+          className="rotate-180"
+          startBorderColor={"border-[#979797]"}
+          endBorderColor={"border-[#BA0315]"}
+          startColor={"#979797"}
+          endColor={"#BA0315"}
+          size={isMobile ? 34 : 52}
+          padding={"lg:p-[26px] md:p-[14px] p-[12.5px]"}
+        />
       </div>
     </div>
   );
@@ -94,7 +110,7 @@ export default function ReviewsSection() {
             isDescription={false}
             inView={true}
             textIsWhite={true}
-            titlePl={40}
+            titlePl={"lg:pl-[30%]"}
             descriptionPart={<NavigationButtons />}
           />
           <Swiper
@@ -119,6 +135,7 @@ export default function ReviewsSection() {
               bulletActiveClass: "swiper-custom-bullet-active",
             }}
             loop={true}
+            autoHeight={true}
             speed={1000}
             className="reviews-swiper">
             {reviews.map((review, index) => (
@@ -128,7 +145,7 @@ export default function ReviewsSection() {
                     <img
                       src={review.image}
                       alt={review.name}
-                      className="w-[250px] h-[196px] object-cover rounded-sm grayscale"
+                      className="md:w-[250px] md:h-[196px] w-full h-auto md:object-cover object-contain rounded-sm grayscale"
                     />
                   </div>
 

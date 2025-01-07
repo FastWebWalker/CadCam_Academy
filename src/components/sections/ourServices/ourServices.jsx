@@ -79,7 +79,7 @@ export default function OurServices() {
           isDescription={false}
           descriptionPart={<DescriptionPart />}
           textIsWhite={false}
-          titlePl={40}
+          titlePl={"lg:pl-[25%]"}
           inView={true}
         />
         <div className="mt-12">

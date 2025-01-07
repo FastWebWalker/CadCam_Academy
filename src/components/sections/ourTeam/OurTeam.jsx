@@ -13,23 +13,28 @@ import image2 from "../../../images/sections/ourTeam/2.png";
 import image3 from "../../../images/sections/ourTeam/3.png";
 
 const NavigationButtons = () => {
+  const isMobile = useMediaQuery("(max-width: 450px)");
   return (
     <div className="flex gap-[10px]">
       <div className="custom-swiper-prev-team">
         <NavigationArrow
-          startColor={"#ffffff"}
+          startBorderColor={"border-[#979797]"}
+          endBorderColor={"border-[#BA0315]"}
+          startColor={"#979797"}
           endColor={"#BA0315"}
-          size={52}
-          padding={26}
+          size={isMobile ? 34 : 52}
+          padding={"lg:p-[26px] md:p-[14px] p-[12.5px]"}
         />
       </div>
       <div className="custom-swiper-next-team">
         <NavigationArrow
           className="rotate-180"
-          startColor={"#ffffff"}
+          startBorderColor={"border-[#979797]"}
+          endBorderColor={"border-[#BA0315]"}
+          startColor={"#979797"}
           endColor={"#BA0315"}
-          size={52}
-          padding={26}
+          size={isMobile ? 34 : 52}
+          padding={"lg:p-[26px] md:p-[14px] p-[12.5px]"}
         />
       </div>
     </div>

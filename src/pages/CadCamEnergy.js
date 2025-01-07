@@ -16,11 +16,12 @@ import TrustedSection from "../components/sections/trusted/TrustedSection";
 import WhyChooseUs from "../components/sections/whyChooseUs/whyChooseUs";
 import Questions from "../components/sections/questions/Questions";
 import Interested from "../components/sections/interested/Interested";
+import backgroundHero from "../images/sections/hero/fdcb075db3b83f2b90e9d4c681deca4f.png";
 
 export default function CadCamEnergy() {
   return (
     <>
-      <HeroSection />
+      <HeroSection image={backgroundHero} />
       <TrustedSection />
       <NumbersSection />
       <WhyChooseUs />

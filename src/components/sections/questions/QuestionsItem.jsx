@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import NavigationArrow from "../../UI/NavigationArrow";
 import Description from "../../UI/Description"; // Add this line to import the Description component
+import { useMediaQuery } from "@mui/material";
 
 const QuestionItem = ({ question, answer }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const isMobile = useMediaQuery("(max-width: 450px)");
 
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
@@ -29,8 +31,10 @@ const QuestionItem = ({ question, answer }) => {
             forceHover={isHovered}
             startColor="#111111"
             endColor="#111111"
-            size={40}
-            padding={18}
+            startBorderColor={"border-[#111111]"}
+            endBorderColor={"border-[#111111]"}
+            size={isMobile ? 24 : 40}
+            padding={"md:p-[18px] p-[14px]"}
           />
         </div>
       </div>

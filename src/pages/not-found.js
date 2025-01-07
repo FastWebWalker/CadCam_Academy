@@ -3,7 +3,7 @@ import ContentContainer from "../components/UI/ContentContainer";
 import Button from "../components/UI/Button";
 import Description from "../components/UI/Description";
 import { useTranslation } from "react-i18next";
-import notFoundImage from "../images/sections/not-found/Frame 48097178.svg";
+// import notFoundImage from "../images/sections/not-found/Frame 48097178.svg";
 import { Link } from "react-router-dom";
 
 const NotFound = () => {
@@ -17,7 +17,7 @@ const NotFound = () => {
               {t("notFound.title")}
             </h3>
 
-            <img src={notFoundImage} alt="not-found" />
+            {/* <img src={notFoundImage} alt="not-found" /> */}
             <Description className="text-white">
               {t("notFound.description")}
             </Description>

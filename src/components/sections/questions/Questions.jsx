@@ -43,7 +43,7 @@ export default function Questions() {
         <SectionHeader
           titleFirstPart={"frequently"}
           titleSecondPart={"asked questions"}
-          titlePl={20}
+          titlePl={"lg:pl-[20%]"}
           isDescription={true}
           description={
             "Check out the most frequently asked questions from our customers and maybe you can find the answer for yourself!"

@@ -57,6 +57,8 @@ const NavigationArrow = ({
   forceHover,
   startColor,
   endColor,
+  startBorderColor,
+  endBorderColor,
   size,
   padding,
 }) => {
@@ -65,10 +67,8 @@ const NavigationArrow = ({
 
   return (
     <div
-      className={`cursor-pointer ${className} p-[${
-        padding + "px"
-      }] border rounded-full transition-all duration-300 ease-out group hover:scale-105 ${
-        isHovered ? `border-[${endColor}]` : `border-[${startColor}]`
+      className={`cursor-pointer ${className} ${padding} border rounded-full transition-all duration-300 ease-out group hover:scale-105 ${
+        isHovered ? `${endBorderColor}` : `${startBorderColor}`
       }`}
       onMouseEnter={() => setLocalHover(true)}
       onMouseLeave={() => setLocalHover(false)}>
