@@ -49,7 +49,7 @@ const Header = () => {
     { text: t("header.navigation.services"), sectionId: "services" },
     { text: t("header.navigation.equipment"), sectionId: "equipment" },
     { text: t("header.navigation.ourTeam"), sectionId: "ourTeam" },
-    { text: t("header.navigation.gallery"), sectionId:"gallery" },
+    { text: t("header.navigation.gallery"), sectionId: "gallery" },
   ];
 
   const scrollToSection = (sectionId) => {
@@ -103,17 +103,13 @@ const Header = () => {
 
           <div className="gap-3 justify-center items-center hidden [@media(min-width:960px)]:flex">
             <SwitchButton />
-            <motion.button
-              onClick={handleSubmit}
-              whileHover={{ scale: 1.03 }}
-              whileTap={{ scale: 0.95 }}>
-              <Button className="uppercase">
+            <button onClick={handleSubmit}>
+              <Button className="uppercase" variant="primary">
                 {t("header.buttons.getInTouch")}
               </Button>
-            </motion.button>
+            </button>
           </div>
 
-       
           <BurgerButton isOpen={isMenuOpen} toggleMenu={toggleMenu} />
         </div>
 

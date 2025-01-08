@@ -60,7 +60,7 @@ const HeroSection = ({ image }) => {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.95 }}>
-                <Button withoutArrow={isMobileSmall} variant="white-white">
+                <Button withoutArrow={isMobileSmall} variant="secondary">
                   {t("buttons.orderCall")}
                 </Button>
               </motion.button>

@@ -62,8 +62,8 @@ const DescriptionPart = () => {
         capabilities!
       </Description>
       <div className="flex justify-end gap-4 mt-8">
-        <Button variant="black-red">Get a price</Button>
-        <Button variant="red-white">Make an order</Button>
+        <Button variant="outline">Get a price</Button>
+        <Button>Make an order</Button>
       </div>
     </div>
   );

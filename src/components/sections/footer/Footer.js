@@ -38,8 +38,6 @@ export default function Footer() {
 
   return (
     <motion.footer
-      // initial={{ opacity: 1, y: 20 }}
-      // animate={{ opacity: isVisible ? 1 : 0.5, y: 0 }}
       transition={{ duration: 0.6 }}
       className="pt-[56px] pb-[20px] bg-[#191919]"
       ref={footerRef}>
@@ -58,8 +56,6 @@ export default function Footer() {
               </motion.div>
               <Description className="text-[20px] text-white mb-0 sm:mb-[20px]">
                 {t("footerSection.description.line1")}
-                <br />
-                {t("footerSection.description.line2")}
               </Description>
             </div>
             <div className="flex flex-col gap-[32px] justify-start md:items-end items-start">
@@ -71,7 +67,7 @@ export default function Footer() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleSubmit}>
-                  <Button variant="white-white">
+                  <Button variant="primary">
                     {t("footerSection.orderCallButton")}
                   </Button>
                 </motion.button>
