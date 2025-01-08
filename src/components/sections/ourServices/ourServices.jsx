@@ -10,72 +10,68 @@ import image3 from "../../../images/sections/ourServices/03.png";
 import image4 from "../../../images/sections/ourServices/04.png";
 import image5 from "../../../images/sections/ourServices/05.png";
 import image6 from "../../../images/sections/ourServices/06.png";
-
-const servicesData = [
-  {
-    id: "01",
-    title: "CAD Modeling",
-    description:
-      "We model structures of any complexity. Modeling on stumps and structures on implants.",
-    image: image1,
-  },
-  {
-    id: "02",
-    title: "Milling",
-    description:
-      "Zirconium (ZrO2), Plastic (PMMA), Wax (WAX), Titanium (Ti), Cobalt chromium (CoCr), Individual titanium abutment (PreMill).",
-    image: image2,
-  },
-  {
-    id: "03",
-    title: "Grinding",
-    description:
-      "Lithium disilicate blocks, Feldspar blocks, Hybrid ceramic (composite) blocks.",
-    image: image3,
-  },
-  {
-    id: "04",
-    title: "Pressing",
-    description: "Lithium disilicate Li-si.",
-    image: image4,
-  },
-  {
-    id: "05",
-    title: "3D Printing",
-    description:
-      "Models, Burn-out wax, Temporary, Artificial gums, Base, Caps / templates.",
-    image: image5,
-  },
-  {
-    id: "06",
-    title: "Laser Sintering",
-    description: "(SLM) Cobalt chrome CoCr (Bego).",
-    image: image6,
-  },
-];
+import { useTranslation } from "react-i18next";
 
 const DescriptionPart = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col justify-between text-[#111111]">
-      <Description>
-        Learn more about our services to take full advantage of our
-        capabilities!
-      </Description>
+      <Description>{t("servicesSection.subtitle")}</Description>
       <div className="flex justify-end gap-4 mt-8">
-        <Button variant="outline">Get a price</Button>
-        <Button>Make an order</Button>
+        <Button variant="outline">{t("buttons.getAPrice")}</Button>
+        <Button variant="outline-red">{t("buttons.makeAnOrder")}</Button>
       </div>
     </div>
   );
 };
 
 export default function OurServices() {
+  const { t } = useTranslation();
+  const servicesData = [
+    {
+      id: "01",
+      title: t("servicesSection.services.0.title"),
+      description: t("servicesSection.services.0.description"),
+      image: image1,
+    },
+    {
+      id: "02",
+      title: t("servicesSection.services.1.title"),
+      description: t("servicesSection.services.1.description"),
+      image: image2,
+    },
+    {
+      id: "03",
+      title: t("servicesSection.services.2.title"),
+      description: t("servicesSection.services.2.description"),
+      image: image3,
+    },
+    {
+      id: "04",
+      title: t("servicesSection.services.3.title"),
+      description: t("servicesSection.services.3.description"),
+      image: image4,
+    },
+    {
+      id: "05",
+      title: t("servicesSection.services.4.title"),
+      description: t("servicesSection.services.4.description"),
+      image: image5,
+    },
+    {
+      id: "06",
+      title: t("servicesSection.services.5.title"),
+      description: t("servicesSection.services.5.description"),
+      image: image6,
+    },
+  ];
+
   return (
-    <section className="bg-white text-[#111111] py-[6.75vh]">
+    <section id="services" className="bg-white text-[#111111] py-[6.75vh]">
       <ContentContainer>
         <SectionHeader
-          titleFirstPart={"OUR"}
-          titleSecondPart={"Services"}
+          titleFirstPart={t("servicesSection.title1")}
+          titleSecondPart={t("servicesSection.title2")}
           isDescription={false}
           descriptionPart={<DescriptionPart />}
           textIsWhite={false}

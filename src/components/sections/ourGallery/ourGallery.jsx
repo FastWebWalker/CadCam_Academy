@@ -1,84 +1,3 @@
-// import ContentContainer from "../../UI/ContentContainer";
-// import SectionHeader from "../../UI/SectionHeader";
-// import Description from "../../UI/Description"; // Add this line to import the Description component
-// import Button from "../../UI/Button"; // Add this line to import the Button component
-// import image1 from "../../../images/sections/ourGallery/1.png";
-// import image2 from "../../../images/sections/ourGallery/2.png";
-// import image3 from "../../../images/sections/ourGallery/3.png";
-// import image4 from "../../../images/sections/ourGallery/4.png";
-// import image5 from "../../../images/sections/ourGallery/5.png";
-
-// import React, { useEffect, useState } from "react";
-
-// const InfiniteImageSlider = () => {
-//   const [position, setPosition] = useState(0);
-
-//   const images = [image1, image2, image3, image4, image5];
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setPosition((prev) => (prev + 1) % images.length);
-//     }, 3000);
-
-//     return () => clearInterval(interval);
-//   }, []);
-
-//   return (
-//     <div className="w-full overflow-hidden bg-white relative">
-//       <div
-//         className="flex"
-//         style={{
-//           transform: `translateX(-${position * 100}%)`,
-//           transition: "none",
-//           width: `${images.length * 100}%`,
-//         }}>
-//         {images.map((image, index) => (
-//           <div key={index} className="w-full flex-shrink-0">
-//             <img
-//               src={image}
-//               alt={`CAD CAM Equipment ${index + 1}`}
-//               className="w-[348px] h-[400px] object-cover"
-//             />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// const DescriptionPart = () => {
-//   return (
-//     <div className="flex flex-col justify-between text-[#111111] items-end">
-//       <Description>
-//         Learn more about our equipment and make sure that we work with
-//         high-quality equipment that guarantees excellent results!
-//       </Description>
-//       <Button variant="black-red" className="mt-8">
-//         Buy a machine
-//       </Button>
-//     </div>
-//   );
-// };
-
-// export default function OurGallery() {
-//   return (
-//     <section className="bg-white text-[#111111] py-[6.75vh]">
-//       <ContentContainer>
-//         <SectionHeader
-//           titleFirstPart={"gallery of"}
-//           titleSecondPart={"our works"}
-//           titlePl={40}
-//           isDescription={false}
-//           descriptionPart={<DescriptionPart />}
-//           inView={true}
-//         />
-//       </ContentContainer>
-
-//       <InfiniteImageSlider />
-//     </section>
-//   );
-// }
-
 import ContentContainer from "../../UI/ContentContainer";
 import SectionHeader from "../../UI/SectionHeader";
 import Description from "../../UI/Description";
@@ -89,6 +8,7 @@ import image3 from "../../../images/sections/ourGallery/3.png";
 import image4 from "../../../images/sections/ourGallery/4.png";
 import image5 from "../../../images/sections/ourGallery/5.png";
 import React from "react";
+import { useTranslation } from "react-i18next";
 
 const InfiniteImageSlider = () => {
   const images = [image1, image2, image3, image4, image5];
@@ -126,27 +46,26 @@ const InfiniteImageSlider = () => {
 };
 
 const DescriptionPart = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col justify-between text-[#111111] items-end">
-      <Description>
-        Learn more about our equipment and make sure that we work with
-        high-quality equipment that guarantees excellent results!
-      </Description>
-      <Button variant="black-red" className="mt-8">
-        Buy a machine
+      <Description>{t("ourGallery.description")}</Description>
+      <Button useLink to={"/gallery"} variant="outline-red" className="mt-8">
+        {t("buttons.viewAllWorks")}
       </Button>
     </div>
   );
 };
 
 export default function OurGallery() {
+  const { t } = useTranslation();
   return (
-    <section className="bg-white text-[#111111] py-[6.75vh]">
+    <section id="gallery" className="bg-white text-[#111111] py-[6.75vh]">
       <ContentContainer>
         <SectionHeader
-          titleFirstPart={"gallery of"}
-          titleSecondPart={"our works"}
-          titlePl={40}
+          titleFirstPart={t("ourGallery.title1")}
+          titleSecondPart={t("ourGallery.title2")}
+          titlePl={"lg:pl-[40%]"}
           isDescription={false}
           descriptionPart={<DescriptionPart />}
           inView={true}

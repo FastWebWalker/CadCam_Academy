@@ -30,6 +30,7 @@ const HeroSection = ({ image }) => {
 
   return (
     <motion.section
+      id="about-us"
       ref={sectionRef}
       initial={{ opacity: 0 }}
       animate={hasAnimated ? { opacity: 1 } : {}}
@@ -61,17 +62,19 @@ const HeroSection = ({ image }) => {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.95 }}>
                 <Button withoutArrow={isMobileSmall} variant="secondary">
-                  {t("buttons.orderCall")}
+                  {t("buttons.makeAnOrder")}
                 </Button>
               </motion.button>
               <motion.div>
                 <Description className="text-white opacity-85">
-                  Get directions:<br></br>43 Pasichna Street, Lviv
+                  {t("heroSection.description2Part1")}
+                  <br></br> {t("heroSection.description2Part2")}
                 </Description>
               </motion.div>
               <motion.div>
                 <Description className="text-white opacity-85">
-                  Mon - Fri: 9:00 - 18:00<br></br>We mill: 24/7
+                  {t("heroSection.description3Part1")}
+                  <br></br> {t("heroSection.description3Part2")}
                 </Description>
               </motion.div>
             </motion.div>

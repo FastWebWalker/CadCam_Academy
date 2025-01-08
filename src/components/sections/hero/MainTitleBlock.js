@@ -4,13 +4,13 @@ import { useState } from "react";
 import Description from "../../UI/Description";
 import HeroTitle from "../../UI/HeroTitle";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTranslation } from "react-i18next";
+import { useTranslation, Trans } from "react-i18next";
 
 export default function MainTitleBlock() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
   const isTablet = useMediaQuery("(min-width:625px) and (max-width:1023px)");
   const isMobile = useMediaQuery("(max-width:624px)");
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   // State to track if animation has already been triggered
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -54,40 +54,64 @@ export default function MainTitleBlock() {
             variants={textVariants}
             className="w-full flex justify-end">
             <Description className="text-white max-w-[350px] opacity-85 pb-[5px]">
-              - CAD/CAM milling<br></br>- 3D PRINT (ASIGA, FORMLABS)
-              <br></br>- High-quality zirkonzahn equipment
+              {t("heroSection.descriptionPart1")}
+              <br></br>
+              {t("heroSection.descriptionPart2")}
+              <br></br>
+              {t("heroSection.descriptionPart3")}
             </Description>
           </motion.div>
           <>
             <div className="flex justify-start items-center">
               <motion.div variants={textVariants}>
                 <HeroTitle>
-                  The <span className="text-red-800">largest</span>
+                  {i18n.language === "en" ? (
+                    <>
+                      The <span className="text-red-800">largest</span>
+                    </>
+                  ) : (
+                    "Найбільший"
+                  )}
                 </HeroTitle>
               </motion.div>
             </div>
             <div className="flex justify-between items-end gap-[20px] pl-[5%]">
               <motion.div variants={textVariants}>
-                <HeroTitle>milling center</HeroTitle>
+                <HeroTitle>{t("heroSection.title2")}</HeroTitle>
               </motion.div>
               {isDesktop && (
                 <motion.div variants={textVariants}>
                   <Description className="text-white max-w-[350px] opacity-85 pb-[5px]">
-                    - CAD/CAM milling<br></br>- 3D PRINT (ASIGA, FORMLABS)
-                    <br></br>- High-quality zirkonzahn equipment
+                    {t("heroSection.descriptionPart1")}
+                    <br></br>
+                    {t("heroSection.descriptionPart2")}
+                    <br></br> {t("heroSection.descriptionPart3")}
                   </Description>
                 </motion.div>
               )}
             </div>
             <div className="flex justify-start items-center gap-[20px] pl-[10%]">
               <motion.div variants={textVariants}>
-                <HeroTitle>in</HeroTitle>
+                <HeroTitle>
+                  {i18n.language === "en" ? (
+                    "In"
+                  ) : (
+                    <span className="text-red-800">Західної</span>
+                  )}
+                </HeroTitle>
               </motion.div>
             </div>
             <div className="flex lg:justify-between justify-start items-center pl-[15%]">
               <motion.div variants={textVariants}>
                 <HeroTitle>
-                  <span className="text-red-800">western</span> ukraine
+                  {i18n.language === "en" ? (
+                    <>
+                      {" "}
+                      <span className="text-red-800">western</span> ukraine
+                    </>
+                  ) : (
+                    "України"
+                  )}
                 </HeroTitle>
               </motion.div>
             </div>
@@ -99,32 +123,54 @@ export default function MainTitleBlock() {
           <div className="flex justify-start items-center">
             <motion.div variants={textVariants}>
               <HeroTitle>
-                The <span className="text-red-800">largest</span>
+                {i18n.language === "en" ? (
+                  <>
+                    The <span className="text-red-800">largest</span>
+                  </>
+                ) : (
+                  "Найбільший"
+                )}
               </HeroTitle>
             </motion.div>
           </div>
           <div className="flex justify-between items-end gap-[20px] pl-[5%]">
             <motion.div variants={textVariants}>
-              <HeroTitle>milling center</HeroTitle>
+              <HeroTitle>{t("heroSection.title2")}</HeroTitle>
             </motion.div>
             {isDesktop && (
               <motion.div variants={textVariants}>
                 <Description className="text-white max-w-[350px] opacity-85 pb-[5px]">
-                  - CAD/CAM milling<br></br>- 3D PRINT (ASIGA, FORMLABS)
-                  <br></br>- High-quality zirkonzahn equipment
+                  {t("heroSection.descriptionPart1")}
+                  <br></br>
+                  {t("heroSection.descriptionPart2")}
+                  <br></br> {t("heroSection.descriptionPart3")}
                 </Description>
               </motion.div>
             )}
           </div>
           <div className="flex justify-start items-center gap-[20px] pl-[10%]">
             <motion.div variants={textVariants}>
-              <HeroTitle>in</HeroTitle>
+              <HeroTitle>
+                {" "}
+                {i18n.language === "en" ? (
+                  "In"
+                ) : (
+                  <span className="text-red-800">Західної</span>
+                )}
+              </HeroTitle>
             </motion.div>
           </div>
           <div className="flex lg:justify-between justify-end items-center pl-[15%]">
             <motion.div variants={textVariants}>
               <HeroTitle>
-                <span className="text-red-800">western</span> ukraine
+                {i18n.language === "en" ? (
+                  <>
+                    {" "}
+                    <span className="text-red-800">western</span> ukraine
+                  </>
+                ) : (
+                  "України"
+                )}
               </HeroTitle>
             </motion.div>
           </div>
@@ -136,32 +182,54 @@ export default function MainTitleBlock() {
             <div className="flex justify-start items-center">
               <motion.div variants={textVariants}>
                 <HeroTitle>
-                  The <span className="text-red-800">largest</span>
+                  {i18n.language === "en" ? (
+                    <>
+                      The <span className="text-red-800">largest</span>
+                    </>
+                  ) : (
+                    "Найбільший"
+                  )}
                 </HeroTitle>
               </motion.div>
             </div>
             <div className="flex justify-between items-end gap-[20px]">
               <motion.div variants={textVariants}>
-                <HeroTitle>milling center</HeroTitle>
+                <HeroTitle>{t("heroSection.title2")}</HeroTitle>
               </motion.div>
               {isDesktop && (
                 <motion.div variants={textVariants}>
                   <Description className="text-white max-w-[350px] opacity-85 pb-[5px]">
-                    - CAD/CAM milling<br></br>- 3D PRINT (ASIGA, FORMLABS)
-                    <br></br>- High-quality zirkonzahn equipment
+                    {t("heroSection.descriptionPart1")}
+                    <br></br>
+                    {t("heroSection.descriptionPart2")}
+                    <br></br> {t("heroSection.descriptionPart3")}
                   </Description>
                 </motion.div>
               )}
             </div>
             <div className="flex justify-start items-center gap-[20px]">
               <motion.div variants={textVariants}>
-                <HeroTitle>in</HeroTitle>
+                <HeroTitle>
+                  {" "}
+                  {i18n.language === "en" ? (
+                    "In"
+                  ) : (
+                    <span className="text-red-800">Західної</span>
+                  )}
+                </HeroTitle>
               </motion.div>
             </div>
             <div className="flex lg:justify-between justify-start items-center">
               <motion.div variants={textVariants}>
                 <HeroTitle>
-                  <span className="text-red-800">western</span> ukraine
+                  {i18n.language === "en" ? (
+                    <>
+                      {" "}
+                      <span className="text-red-800">western</span> ukraine
+                    </>
+                  ) : (
+                    "України"
+                  )}
                 </HeroTitle>
               </motion.div>
             </div>

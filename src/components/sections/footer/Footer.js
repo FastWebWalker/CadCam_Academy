@@ -67,9 +67,7 @@ export default function Footer() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleSubmit}>
-                  <Button variant="primary">
-                    {t("footerSection.orderCallButton")}
-                  </Button>
+                  <Button variant="primary">{t("buttons.callUs")}</Button>
                 </motion.button>
               </div>
             </div>
@@ -80,28 +78,33 @@ export default function Footer() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-white non-italic">
             <div>
+              <h4 className="font-normal mb-6">
+                {t("footerSection.contactUsTitle")}
+              </h4>
               <div>
+                <div>
+                  <div className="mb-3">
+                    {t("footerSection.address.title")}:
+                    <br />
+                    <span className="opacity-50">
+                      {t("footerSection.address.content")}
+                    </span>
+                  </div>
+                </div>
                 <div className="mb-3">
-                  {t("footerSection.address.title")}:
+                  {t("footerSection.phone.title")}:
                   <br />
                   <span className="opacity-50">
-                    {t("footerSection.address.content")}
+                    {t("footerSection.phone.content")}
                   </span>
                 </div>
-              </div>
-              <div className="mb-3">
-                {t("footerSection.phone.title")}:
-                <br />
-                <span className="opacity-50">
-                  {t("footerSection.phone.content")}
-                </span>
-              </div>
-              <div>
-                {t("footerSection.email.title")}:
-                <br />
-                <span className="opacity-50">
-                  {t("footerSection.email.content")}
-                </span>
+                <div>
+                  {t("footerSection.email.title")}:
+                  <br />
+                  <span className="opacity-50">
+                    {t("footerSection.email.content")}
+                  </span>
+                </div>
               </div>
             </div>
             <div>
@@ -127,10 +130,10 @@ export default function Footer() {
                 </motion.li>
                 <motion.li whileHover={{ x: 5 }}>
                   <a
-                    href="#products"
-                    onClick={handleScroll("products")}
+                    href="#equipment"
+                    onClick={handleScroll("equipment")}
                     className="opacity-50 hover:opacity-100 transition-all">
-                    {t("footerSection.page.links.products")}
+                    {t("footerSection.page.links.equipment")}
                   </a>
                 </motion.li>
                 <motion.li whileHover={{ x: 5 }}>
@@ -139,6 +142,14 @@ export default function Footer() {
                     onClick={handleScroll("reviews")}
                     className="opacity-50 hover:opacity-100 transition-all">
                     {t("footerSection.page.links.reviews")}
+                  </a>
+                </motion.li>
+                <motion.li whileHover={{ x: 5 }}>
+                  <a
+                    href="#faqs"
+                    onClick={handleScroll("faqs")}
+                    className="opacity-50 hover:opacity-100 transition-all">
+                    {t("footerSection.page.links.faqs")}
                   </a>
                 </motion.li>
               </ul>
@@ -150,30 +161,42 @@ export default function Footer() {
               <ul className="space-y-2 inline-block">
                 <motion.li whileHover={{ x: 5 }}>
                   <a
-                    href="https://cadcam.energy/"
+                    href="#partners"
+                    onClick={handleScroll("partners")}
                     className="opacity-50 hover:opacity-100 transition-all">
-                    {t("footerSection.ourLaboratories.labs.cadCamEnergy")}
+                    {t("footerSection.ourLaboratories.labs.partners")}
                   </a>
                 </motion.li>
                 <motion.li whileHover={{ x: 5 }}>
                   <a
-                    href="https://contour-lab.com/"
+                    href="#achievements"
+                    onClick={handleScroll("achievements")}
                     className="opacity-50 hover:opacity-100 transition-all">
-                    {t("footerSection.ourLaboratories.labs.contour")}
+                    {t("footerSection.ourLaboratories.labs.achievements")}
                   </a>
                 </motion.li>
                 <motion.li whileHover={{ x: 5 }}>
                   <a
-                    href="https://senergy-dental.com/"
+                    href="#gallery"
+                    onClick={handleScroll("gallery")}
                     className="opacity-50 hover:opacity-100 transition-all">
-                    {t("footerSection.ourLaboratories.labs.senergy")}
+                    {t("footerSection.ourLaboratories.labs.gallery")}
                   </a>
                 </motion.li>
                 <motion.li whileHover={{ x: 5 }}>
                   <a
-                    href="https://dentalcad.online/"
+                    href="#team"
+                    onClick={handleScroll("team")}
                     className="opacity-50 hover:opacity-100 transition-all">
-                    {t("footerSection.ourLaboratories.labs.cadStudio")}
+                    {t("footerSection.ourLaboratories.labs.ourTeam")}
+                  </a>
+                </motion.li>
+                <motion.li whileHover={{ x: 5 }}>
+                  <a
+                    href="#whyWe"
+                    onClick={handleScroll("whyWe")}
+                    className="opacity-50 hover:opacity-100 transition-all">
+                    {t("footerSection.ourLaboratories.labs.whyWe")}
                   </a>
                 </motion.li>
               </ul>
@@ -185,7 +208,18 @@ export default function Footer() {
               <ul className="flex space-x-[22px]">
                 <motion.li whileHover={{ scale: 1.2, rotate: 5 }}>
                   <a
-                    href="https://www.instagram.com/contour_lab/?igshid=YmMyMTA2M2Y%3D"
+                    href="https://t.me/CadCamEnergy"
+                    target="_no_blank"
+                    className="hover:text-white">
+                    <img
+                      src={telegram}
+                      alt={t("footerSection.media.socials.telegram")}
+                    />
+                  </a>
+                </motion.li>
+                <motion.li whileHover={{ scale: 1.2, rotate: 5 }}>
+                  <a
+                    href="https://www.instagram.com/cadcam.energy/"
                     target="_no_blank"
                     className="hover:text-white">
                     <img
@@ -196,34 +230,12 @@ export default function Footer() {
                 </motion.li>
                 <motion.li whileHover={{ scale: 1.2, rotate: 5 }}>
                   <a
-                    href="https://www.facebook.com/contour.laboratory/?_rdr"
+                    href="https://www.facebook.com/cadcam.energy/"
                     target="_no_blank"
                     className="hover:text-white">
                     <img
                       src={facebook}
                       alt={t("footerSection.media.socials.facebook")}
-                    />
-                  </a>
-                </motion.li>
-                <motion.li whileHover={{ scale: 1.2, rotate: 5 }}>
-                  <a
-                    href="https://www.linkedin.com/company/smile-energy-group/posts/?feedView=all"
-                    className="hover:text-white"
-                    target="_no_blank">
-                    <img
-                      src={linkedIn}
-                      alt={t("footerSection.media.socials.linkedIn")}
-                    />
-                  </a>
-                </motion.li>
-                <motion.li whileHover={{ scale: 1.2, rotate: 5 }}>
-                  <a
-                    href="https://t.me/+hvMUwEQGYac2NTVi"
-                    target="_no_blank"
-                    className="hover:text-white">
-                    <img
-                      src={telegram}
-                      alt={t("footerSection.media.socials.telegram")}
                     />
                   </a>
                 </motion.li>
@@ -235,9 +247,6 @@ export default function Footer() {
           <p>&copy; {t("footerSection.copyright")}</p>
         </div>
       </ContentContainer>
-      {/* {formIsOpen && (
-        <FormModal onSubmit={handleSubmit} onClose={handleClose} />
-      )} */}
     </motion.footer>
   );
 }

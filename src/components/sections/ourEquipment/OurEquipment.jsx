@@ -17,16 +17,15 @@ import image6 from "../../../images/sections/ourEquipment/6.png";
 import image7 from "../../../images/sections/ourEquipment/7.png";
 import background from "../../../images/sections/ourEquipment/backroung.png";
 import { useMediaQuery } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 const DescriptionPart = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col justify-between text-[#111111] items-end">
-      <Description>
-        Learn more about our equipment and make sure that we work with
-        high-quality equipment that guarantees excellent results!
-      </Description>
-      <Button variant="black-red" className="mt-8">
-        Buy a machine
+      <Description>{t("ourEquipment.description")}</Description>
+      <Button variant="outline-red" className="mt-8">
+        {t("buttons.buyAMachine")}
       </Button>
     </div>
   );
@@ -37,6 +36,7 @@ export default function OurEquipment() {
   const isTablet = useMediaQuery("(min-width: 650px) and (max-width: 768px)");
   const isMobile = useMediaQuery("(max-width: 649px)");
   const isMobileSmall = useMediaQuery("(max-width: 400px");
+  const { t } = useTranslation();
 
   const slidesPerView = isTablet ? 2.5 : isMobile ? 1.5 : isMobileSmall && 1;
 
@@ -72,15 +72,17 @@ export default function OurEquipment() {
   ];
 
   return (
-    <section className="bg-white py-[6.75vh] text-[#111111] relative z-[1]">
+    <section
+      id="equipment"
+      className="bg-white py-[6.75vh] text-[#111111] relative z-[1]">
       <div className="absolute bottom-0 right-0 opacity-100 z-[0]">
         <img src={background} alt="background" />
       </div>
 
       <ContentContainer>
         <SectionHeader
-          titleFirstPart={"OUR"}
-          titleSecondPart={"Equipment"}
+          titleFirstPart={t("ourEquipment.title1")}
+          titleSecondPart={t("ourEquipment.title2")}
           isDescription={false}
           descriptionPart={<DescriptionPart />}
           textIsWhite={false}
@@ -98,24 +100,24 @@ export default function OurEquipment() {
             ))}
           </div>
         )}
+        {(isTablet || isMobile) && (
+          <div className="mt-8 z-[1]">
+            <Swiper
+              modules={[Navigation]}
+              spaceBetween={32}
+              slidesPerView={slidesPerView}
+              loop={true}
+              pagination={{ clickable: true }}
+              className="equipment-swiper">
+              {equipmentData.map((service) => (
+                <SwiperSlide key={service.title}>
+                  <EquipmentItem title={service.title} image={service.image} />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        )}
       </ContentContainer>
-      {(isTablet || isMobile) && (
-        <div className="mt-8 z-[1]">
-          <Swiper
-            modules={[Navigation]}
-            spaceBetween={32}
-            slidesPerView={slidesPerView}
-            loop={true}
-            pagination={{ clickable: true }}
-            className="equipment-swiper">
-            {equipmentData.map((service) => (
-              <SwiperSlide key={service.title}>
-                <EquipmentItem title={service.title} image={service.image} />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      )}
     </section>
   );
 }

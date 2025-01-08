@@ -12,76 +12,163 @@
     }
   },
   "heroSection": {
-    "description1": "Unlock the potential of your smile with our advanced solutions for dental laboratories, orthopedics and implantology.",
-    "description2": "Don't waste time!\nOrder a call now and find out all the details."
+    "title1": "The <0>largest</0>",
+    "title2": "milling center",
+    "title3": "in",
+    "title4": "Western ukraine",
+    "descriptionPart1": "- CAD/CAM milling",
+    "descriptionPart2": "- 3D PRINT (ASIGA, FORMLABS)",
+    "descriptionPart3": "- High-quality zirkonzahn equipment",
+
+    "description2Part1": "Get directions:",
+    "description2Part2": "43 Pasichna Street, Lviv",
+    "description3Part1": "Mon - Fri: 9:00 - 18:00",
+    "description3Part2": "We mill: 24/7"
   },
   "buttons": {
-    "ourStore": "Our Store",
-    "orderCall": "Order A Call"
-  },
-  "titleBlock": {
-    "mobileTitle": "Global leaders and experts in dental field",
-    "desktopTitles": {
-      "line1": "global leaders",
-      "line2": "and experts",
-      "line3": "in dental field"
-    }
+    "makeAnOrder": "Make an order",
+    "getAPrice": "Get A Price",
+    "buyAMachine": "Buy A Machine",
+    "viewAllWorks": "View All Works",
+    "placeAnOrder": "Place An Order",
+    "callUs": "Call Us"
   },
 
   "numbersSection": {
-    "experience": "Years of experience in orthopedic dentistry",
+    "experience": "Years we mill your work",
     "cases": "Successfully executed cases",
     "partners": "Partners who cooperate with us",
     "customers": "Satisfied customers"
   },
+  "galleryPage": {
+    "title1": "gallery of",
+    "title2": "our works",
+    "description": "View all our work and see for yourself our professional skills!",
+    "tabs": [
+      "All Photos",
+      "Titanium beams",
+      "Crowns",
+      "Blocks",
+      "Full Anatomy",
+      "3D Printing"
+    ]
+  },
 
+  "servicesSection": {
+    "title1": "OUR",
+    "title2": "SERVICES",
+    "subtitle": "Learn more about our services to take full advantage of our capabilities!",
+    "buttons": {
+      "getPrice": "Get A Price",
+      "makeOrder": "Make An Order"
+    },
+    "services": [
+      {
+        "id": "01",
+        "title": "CAD Modeling",
+        "description": "We model structures of any complexity. Modeling on stumps and structures on implants."
+      },
+      {
+        "id": "02",
+        "title": "Milling",
+        "description": "Zirconium (ZrO2), Plastic (PMMA), Wax (WAX), Titanium (Ti), Cobalt chromium (CoCr), individual titanium abutment (Premill)."
+      },
+      {
+        "id": "03",
+        "title": "Grinding",
+        "description": "Lithium disilicate blocks, Feldspar blocks, Hybrid ceramic (composite) blocks."
+      },
+      {
+        "id": "04",
+        "title": "Pressing",
+        "description": "Lithium disilicate Li-si."
+      },
+      {
+        "id": "05",
+        "title": "3D Printing",
+        "description": "Models, Burn-out wax, Temporary, Artificial gums, Base, Caps / templates."
+      },
+      {
+        "id": "06",
+        "title": "Laser Sintering",
+        "description": "(SLM) Cobalt chrome CoCr (Bego)."
+      }
+    ]
+  },
+  "ourTeamSection": {
+    "title1": "our team",
+    "title2": "of professionals",
+    "team": [
+      { "name": "Vladyslav Kuzkin", "position": "CAD Designer" },
+      { "name": "Nazar Kitura", "position": "Milling center operator" },
+      { "name": "Ihor Karpiuk", "position": "Milling center operator" }
+    ]
+  },
+  "ourEquipment": {
+    "title1": "OUR",
+    "title2": "Equipment",
+    "description": "Learn more about our equipment and make sure that we work with high-quality equipment that guarantees excellent results!"
+  },
   "chooseSection": {
-    "title": "Why Choose Us?",
+    "title1": "WHY",
+    "title2": "CHOOSE US?",
+    "subtitle": "We provide an individual approach to each client, guaranteeing high quality service and effective solutions. By choosing us, you will get a reliable partner who will help you achieve your goals.",
     "items": [
       {
-        "title": "Innovative Dental Solutions",
-        "description": "Stay ahead of the curve with cutting-edge technologies and innovative techniques. Our team continually researches the latest advancements in dental technology to provide high-quality, long-lasting solutions for dental laboratories, implantology, and prosthetics."
+        "title1": "Innovative Dental",
+        "title2": "Solutions",
+        "description": "We use modern CAD/CAM software solutions that allow us to create the most accurate 3D models and perform complex engineering calculations. Thanks to innovative approaches, we provide high-quality design that meets modern energy industry standards."
       },
       {
-        "title": "Proven Expertise and Experience",
-        "description": "With years of industry experience, Smile Energy Group has built a reputation for excellence. Our specialists have extensive knowledge in dental prosthetics and implants, ensuring that each solution is tailored to the specific needs of the patient."
+        "title1": "Experienced",
+        "title2": "Team",
+        "description": "Our engineers and designers have many years of experience in the energy sector. We are constantly improving our skills to offer the best solutions. Every project we undertake is carried out by a team of professionals who understand the specifics of your industry."
       },
       {
-        "title": "Personalized Client Support",
-        "description": "We believe in providing exceptional customer service, offering personalized solutions and continuous support to every client. Our dedicated team works closely with dental professionals to meet their specific requirements, whether it's providing advanced prosthetics on complex implant procedures."
+        "title1": "Individual",
+        "title2": "Approach",
+        "description": "We believe that every client is unique, so we offer personalized solutions that take into account all your needs, goals and constraints. Together with you, we develop the optimal strategy that will allow you to achieve maximum results."
       },
       {
-        "title": "Comprehensive Range of Services",
-        "description": "Smile Energy Group offers a complete range of services. Our multidisciplinary approach ensures that we can handle every aspect of dental care, making us your one-stop solution for all needs related to dental laboratories, implants, and orthopedic prostheses."
+        "title1": "Modern New",
+        "title2": "Equipment",
+        "description": "Our milling center is equipped with the most modern equipment that meets leading standards of accuracy. Thanks to the use of innovative technologies and advanced solutions in the field of material processing, we ensure impeccable quality of each product."
+      },
+      {
+        "title1": "Work with all Types",
+        "title2": "of Materials",
+        "description": "Zirconium, plastic, wax, titanium, cobalt-chromium, lithium disilicate are just some of the materials we successfully work with. Our team has extensive experience working with a variety of materials, which allows us to find optimal solutions for each project."
+      },
+      {
+        "title1": "Support at",
+        "title2": "Every Stage",
+        "description": "We don't just complete a project and hand it over to the client. Our team stays with you throughout the entire implementation process: from the first sketch to implementation and technical support. You can be sure that you will receive help at any time."
       }
     ]
   },
   "trustedSection": {
-    "title": "Trusted partners",
-    "description": "Thanks to its experience, skills, and high qualifications, we will become a reliable partner for you and will offer exactly the solutions you and your patients need."
+    "title1": "Trusted",
+    "title2": "partners",
+    "description": "We are proud to partner with the best brands and companies that share our values ​​and passion for innovation. Together we create the best solutions for you."
   },
   "reviewsSection": {
-    "title": "REVIEWS OF OUR CLIENTS",
+    "title1": "REVIEWS OF",
+    "title2": "OUR CLIENTS",
     "reviews": [
       {
-        "name": "Hrynyk Rustam",
+        "name": "Gaborets Yuriy",
         "position": "Dentist, Lviv",
-        "quote": "The most important thing in the high-quality work of an orthopedist is the high-quality work of a technician... Thank you to Serhiy Hrybovskiy's laboratory!"
+        "quote": "A cool team of professionals who are able to fulfill orders in an incredibly short time. And this is just the first impression. Let's go! Consultations, training, help, trust, care for the client's reputation, etc."
       },
       {
-        "name": "Ewan Bramley",
-        "position": "Dentist, United Kingdom",
-        "quote": "Thank you Serhiy! I am so grateful to have met you and found your fantastic dental lab. All the best to you and your family for 2020. Let's make it a fantastic year for us both."
+        "name": "Mykhaylo Hryshchuk",
+        "position": "Dental Tech, Lviv",
+        "quote": "Mega Dent lab dental laboratory is a partner of Cad Cam Energy. Quality, speed, accuracy, responsibility - words that characterize the milling center + powerful courier service. I recommend!"
       },
       {
-        "name": "Pidhoretskiy Ruslan",
-        "position": "Dentist, Kyiv",
-        "quote": "A really cool laboratory. Laba, which is constantly developing, instantly responds to a call, is always in touch. All work is done on time, according to the given terms... Pleasant cooperation that has been going on for years."
-      },
-      {
-        "name": "Hubal Myroslav",
-        "position": "Dentist, Khust",
-        "quote": "I wanted to work with a digital laboratory. People always hear me here. Everything was done in the promised time."
+        "name": "Lozinskiy Ihor",
+        "position": "Dental Tech, Lviv",
+        "quote": "I would recommend CadCam Energy to all technicians, I have been working with them for years, I am satisfied with their responsibility, experience, quality and timely completion of the work they performed."
       }
     ]
   },
@@ -90,7 +177,41 @@
     "description": "Every smile is an expression of personality and careful attitude to health. In this regard, high-quality dental materials and dental equipment are important components of the process of their creation. SeTrade online store of dental materials is a look at the new generation of dentistry. In this context, it embodies the concept of accessibility of the most modern means, creating opportunities for professional development and achieving the highest standards in the field of oral health.",
     "button": "Our Store"
   },
-
+  "ourGallery": {
+    "title1": "gallery of",
+    "title2": "our works",
+    "description": "View all our work and see for yourself our professional skills!"
+  },
+  "faq": {
+    "title1": "FREQUENTLY",
+    "title2": "ASKED QUESTIONS",
+    "subtitle": "Check out the most frequently asked questions from our customers and maybe you can find the answer for yourself!",
+    "questions": {
+      "materials": {
+        "question": "What materials can be used for milling?",
+        "answer": "We work with zirconium (ZrO2), plastic (PMMA), wax (WAX), titanium (Ti), cobalt-chrome (CoCr), and also create individual titanium abutments (PreMill). We use modern CAD/CAM software solutions that allow us to create the most accurate 3D models and perform complex engineering calculations. Thanks to innovative approaches, we provide high-quality design that meets modern energy industry standards."
+      },
+      "services": {
+        "question": "What services does the CADCAM Energy milling center provide?",
+        "answer": "CADCAM Energy milling center offers modeling, milling, grinding, pressing, 3D printing, laser sintering and manufacturing of products from various materials, such as zirconium, titanium, CoCr, plastic, etc. The company ensures high quality and promptness of order fulfillment."
+      },
+      "workingHours": {
+        "question": "Do you work 24/7?",
+        "answer": "Our working hours for accepting orders are from 9:00 AM to 6:00 PM, and we mill 24/7."
+      },
+      "warranty": {
+        "question": "Is there a warranty on the products?",
+        "answer": "We provide a guarantee for all our products in accordance with established quality standards. The duration of the guarantee period depends on the specific product and is indicated in the accompanying documentation. In case of defects, we guarantee free repair or replacement of the product."
+      },
+      "orderFulfillment": {
+        "question": "How quickly is the order fulfilled?",
+        "answer": "Order fulfillment depends on the size and complexity of the product and can take from 1 to 3 business days."
+      }
+    }
+  },
+  "interested": {
+    "text": "If you are interested in our milling services and would like to entrust us with your order, contact us to clarify all the details, we are always open for communication."
+  },
   "popularSection": {
     "title": "Popular products",
     "description": "The following materials are the most popular among the presented products",
@@ -121,34 +242,37 @@
       "line1": "The largest milling center in Western Ukraine"
     },
     "contactUs": "We are happy when you are satisfied and want to know when something went wrong.",
+    "contactUsTitle": "Contact Us",
     "address": {
       "title": "Address",
       "content": "43 Pasichna str., Lviv, Ukraine"
     },
     "phone": {
       "title": "Phone number",
-      "content": "+38(068)-385-35-35"
+      "content": "+380 67 611 66 77"
     },
     "email": {
       "title": "Email",
-      "content": "smilenergygroup.ua@gmail.com"
+      "content": "cadcam.energy@gmail.com"
     },
     "page": {
       "title": "Page",
       "links": {
         "aboutUs": "About Us",
         "services": "Services",
-        "products": "Products",
-        "reviews": "Reviews"
+        "equipment": "Equipment",
+        "reviews": "Reviews",
+        "faqs": "FAQ’s"
       }
     },
     "ourLaboratories": {
-      "title": "Our Laboratories:",
+      "title": "Other",
       "labs": {
-        "cadCamEnergy": "CadCam Energy",
-        "contour": "Contour",
-        "senergy": "Senergy",
-        "cadStudio": "Cad Studio"
+        "partners": "Partners",
+        "achievements": "Achievements",
+        "gallery": "Gallery",
+        "ourTeam": "Our Team",
+        "whyWe": "Why We?"
       }
     },
     "media": {

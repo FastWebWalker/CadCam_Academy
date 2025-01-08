@@ -9,22 +9,21 @@ import image3 from "../../../images/sections/whyChooseUs/3.svg";
 import image4 from "../../../images/sections/whyChooseUs/4.svg";
 import image5 from "../../../images/sections/whyChooseUs/5.svg";
 import image6 from "../../../images/sections/whyChooseUs/6.svg";
-
+import { useTranslation } from "react-i18next";
 export default function WhyChooseUs() {
+  const { t } = useTranslation();
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
   return (
-    <section className="relative bg-[#111111] text-white py-[6.75vh]" ref={ref}>
+    <section id="whyWe" className="relative bg-[#111111] text-white py-[6.75vh]" ref={ref}>
       <ContentContainer>
         <SectionHeader
-          titleFirstPart={"why"}
-          titleSecondPart={"choose us?"}
-          description={
-            "We provide an individual approach to each client, guaranteeing high-quality service and effective solutions. By choosing us, you will get a reliable partner who will help you achieve your goals."
-          }
+          titleFirstPart={t("chooseSection.title1")}
+          titleSecondPart={t("chooseSection.title2")}
+          description={t("chooseSection.subtitle")}
           isDescription={true}
           inView={inView}
           titlePl={"lg:pl-[25%]"}
@@ -34,8 +33,13 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-[repeat(auto-fit,minmax(290px,1fr))] gap-x-[10vw] gap-y-[6.4vh] justify-between mt-8">
           <WhyChooseUsItem
             icon={image1}
-            title={<>Innovative Dental Solutions</>}
-            description="We use modern CAD/CAM software solutions that allow us to create the most accurate 3D models and perform complex engineering calculations. Thanks to innovative approaches, we provide high-quality design that meets modern energy industry standards."
+            title={
+              <>
+                {t("chooseSection.items.0.title1")}
+                {t("chooseSection.items.0.title2")}
+              </>
+            }
+            description={t("chooseSection.items.0.description")}
             inView={inView}
           />
 
@@ -43,10 +47,12 @@ export default function WhyChooseUs() {
             icon={image2}
             title={
               <>
-                Experienced<br></br>Team
+                {t("chooseSection.items.1.title1")}
+                <br></br>
+                {t("chooseSection.items.1.title2")}
               </>
             }
-            description="Our engineers and designers have many years of experience in the energy sector. We are constantly improving our skills to offer the best solutions. Every project we undertake is carried out by a team of professionals who understand the specifics of your industry."
+            description={t("chooseSection.items.1.description")}
             inView={inView}
           />
 
@@ -54,10 +60,11 @@ export default function WhyChooseUs() {
             icon={image3}
             title={
               <>
-                Individual<br></br>Approach
+                {t("chooseSection.items.2.title1")}
+                <br></br> {t("chooseSection.items.2.title2")}
               </>
             }
-            description="We believe that every client is unique, so we offer personalized solutions that take into account all your needs, goals and constraints. Together with you, we develop the optimal strategy that will allow you to achieve maximum results."
+            description={t("chooseSection.items.2.description")}
             inView={inView}
           />
 
@@ -65,10 +72,11 @@ export default function WhyChooseUs() {
             icon={image4}
             title={
               <>
-                Modern New<br></br>Equipment
+                {t("chooseSection.items.3.title1")}
+                <br></br> {t("chooseSection.items.3.title2")}
               </>
             }
-            description="Our milling center is equipped with the most modern equipment that meets leading standards of accuracy. Thanks to the use of innovative technologies and advanced solutions in the field of material processing, we ensure impeccable quality of each product."
+            description={t("chooseSection.items.3.description")}
             inView={inView}
           />
 
@@ -76,10 +84,12 @@ export default function WhyChooseUs() {
             icon={image5}
             title={
               <>
-                Work with all Types<br></br>of Materials
+                {t("chooseSection.items.4.title1")}
+                <br></br>
+                {t("chooseSection.items.4.title2")}
               </>
             }
-            description="Zirconium, plastic, wax, titanium, cobalt-chromium, lithium disilicate are just some of the materials we successfully work with. Our team has extensive experience working with a variety of materials, which allows us to find optimal solutions for each project."
+            description={t("chooseSection.items.4.description")}
             inView={inView}
           />
 
@@ -87,10 +97,11 @@ export default function WhyChooseUs() {
             icon={image6}
             title={
               <>
-                Support at <br></br>Every Stage
+                {t("chooseSection.items.5.title1")}
+                <br></br> {t("chooseSection.items.5.title2")}
               </>
             }
-            description="We don't just complete a project and hand it over to the client. Our team stays with you throughout the entire implementation process: from the first sketch to implementation and technical support. You can be sure that you will receive help at any time."
+            description={t("chooseSection.items.5.description")}
             inView={inView}
           />
         </div>

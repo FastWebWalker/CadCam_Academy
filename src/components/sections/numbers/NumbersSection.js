@@ -25,7 +25,7 @@ export default function NumbersSection() {
   };
 
   return (
-    <section className="relative bg-white text-[#111111] ">
+    <section id="achievements" className="relative bg-white text-[#111111] ">
       {isDesktop && (
         <ContentContainer
           as={motion.div}

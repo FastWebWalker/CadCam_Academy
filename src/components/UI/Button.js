@@ -43,6 +43,16 @@ const Button = ({
           }`,
           arrow: "text-[#111111]",
         };
+      case "outline-red":
+        return {
+          container: `${
+            isHovered ? "bg-[#BA0315]" : "bg-white"
+          } border-[#BA0315]  `,
+          content: `${
+            isHovered ? "bg-white text-[#111111]" : "bg-[#BA0315] text-white"
+          }`,
+          arrow: `${isHovered ? "text-white" : "text-[#111111]"}`,
+        };
       default:
         return {
           container: "border-[#BA0315] bg-transparent ",
@@ -89,7 +99,11 @@ const Button = ({
 
   if (useLink && to) {
     return (
-      <Link to={to} className={containerClasses}>
+      <Link
+        to={to}
+        className={containerClasses}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}>
         {renderContent()}
       </Link>
     );

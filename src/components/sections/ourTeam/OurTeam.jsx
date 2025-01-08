@@ -50,37 +50,28 @@ export default function OurTeam() {
 
   const reviews = [
     {
-      name: `${t("reviewsSection.reviews.0.name")}`,
-      position: `${t("reviewsSection.reviews.0.position")}`,
+      name: `${t("ourTeamSection.team.0.name")}`,
+      position: `${t("ourTeamSection.team.0.position")}`,
       image: image1,
-      quote: `${t("reviewsSection.reviews.0.quote")}`,
     },
     {
-      name: `${t("reviewsSection.reviews.1.name")}`,
-      position: `${t("reviewsSection.reviews.1.position")}`,
+      name: `${t("ourTeamSection.team.1.name")}`,
+      position: `${t("ourTeamSection.team.1.position")}`,
       image: image2,
-      quote: `${t("reviewsSection.reviews.1.quote")}`,
     },
     {
-      name: `${t("reviewsSection.reviews.2.name")}`,
-      position: `${t("reviewsSection.reviews.2.position")}`,
+      name: `${t("ourTeamSection.team.2.name")}`,
+      position: `${t("ourTeamSection.team.2.position")}`,
       image: image3,
-      quote: `${t("reviewsSection.reviews.2.quote")}`,
-    },
-    {
-      name: `${t("reviewsSection.reviews.2.name")}`,
-      position: `${t("reviewsSection.reviews.2.position")}`,
-      image: image3,
-      quote: `${t("reviewsSection.reviews.2.quote")}`,
     },
   ];
 
   return (
-    <section className="bg-[#111111] py-[6.75vh]">
+    <section id="team" className="bg-[#111111] py-[6.75vh]">
       <ContentContainer>
         <SectionHeader
-          titleFirstPart={"our team of"}
-          titleSecondPart={"professionals"}
+          titleFirstPart={t("ourTeamSection.title1")}
+          titleSecondPart={t("ourTeamSection.title2")}
           isDescription={false}
           inView={true}
           textIsWhite={true}

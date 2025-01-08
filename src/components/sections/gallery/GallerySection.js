@@ -60,32 +60,32 @@ const fullAnatomy = [
 const threeDPrinting = [threeD1, threeD2, threeD3, threeD4, threeD5];
 const all = [...fullAnatomy, ...crowns, ...blocks, ...threeDPrinting];
 
-const logos = [
-  "All Photos",
-  "Titanium beams",
-  "Crowns",
-  "Blocks",
-  "Full Anatomy",
-  "3D Printing",
-];
-
 const GallerySection = () => {
-  const [currentCompany, setCurrentCompany] = useState("Full Anatomy");
   const { t } = useTranslation();
+  const [currentCompany, setCurrentCompany] = useState(t("galleryPage.tabs.0"));
+
+  const logos = [
+    t("galleryPage.tabs.0"),
+    t("galleryPage.tabs.1"),
+    t("galleryPage.tabs.2"),
+    t("galleryPage.tabs.3"),
+    t("galleryPage.tabs.4"),
+    t("galleryPage.tabs.5"),
+  ];
 
   const getImagesForCompany = (company) => {
     switch (company) {
-      case "All Photos":
+      case t("galleryPage.tabs.0"):
         return all;
-      case "Titanium beams":
+      case t("galleryPage.tabs.1"):
         return titaniumBeams;
-      case "Crowns":
+      case t("galleryPage.tabs.2"):
         return crowns;
-      case "Blocks":
+      case t("galleryPage.tabs.3"):
         return blocks;
-      case "Full Anatomy":
+      case t("galleryPage.tabs.4"):
         return fullAnatomy;
-      case "3D Printing":
+      case t("galleryPage.tabs.5"):
         return threeDPrinting;
       default:
         return [];
@@ -119,17 +119,15 @@ const GallerySection = () => {
     <section className="py-12 bg-white">
       <ContentContainer>
         <SectionHeader
-          titleFirstPart={"gallery of"}
-          titleSecondPart={"our works"}
+          titleFirstPart={t("galleryPage.title1")}
+          titleSecondPart={t("galleryPage.title2")}
           isDescription={true}
-          description={
-            "View all our work and see for yourself our professional skills!"
-          }
+          description={t("galleryPage.description")}
           inView={true}
           titlePl={"lg:pl-[40%]"}
         />
         {/* Tabs */}
-        <div className="flex flex-wrap justify-center gap-8 mb-12">
+        <div className="flex flex-wrap justify-between gap-8 mb-12">
           {logos.map((logo) => (
             <button
               key={logo.name}
@@ -139,7 +137,7 @@ const GallerySection = () => {
                   ? "border-l-2 border-redCustom"
                   : ""
               }`}>
-              <div>{logo}</div>
+              <div className="sm:text-[24px] text-[20px]">{logo}</div>
             </button>
           ))}
         </div>
@@ -157,7 +155,7 @@ const GallerySection = () => {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="aspect-square relative overflow-hidden rounded-lg shadow-lg">
+                className="aspect-square relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
                 <img
                   src={image}
                   alt={`Gallery item ${index + 1}`}

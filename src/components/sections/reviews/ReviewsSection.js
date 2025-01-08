@@ -10,8 +10,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import review1 from "../../../images/sections/reviews/1.png";
-import review2 from "../../../images/sections/reviews/2.png";
-import review3 from "../../../images/sections/reviews/3.jpg";
+import review2 from "../../../images/sections/reviews/2.jpg";
+import review3 from "../../../images/sections/reviews/3.png";
 
 import { useMediaQuery } from "@mui/material";
 import { useTranslation } from "react-i18next";
@@ -105,8 +105,8 @@ export default function ReviewsSection() {
         <div className="relative" ref={contentRef}>
           {/* Swiper Component */}
           <SectionHeader
-            titleFirstPart={"reviews of"}
-            titleSecondPart={"our clients"}
+            titleFirstPart={t("reviewsSection.title1")}
+            titleSecondPart={t("reviewsSection.title2")}
             isDescription={false}
             inView={true}
             textIsWhite={true}

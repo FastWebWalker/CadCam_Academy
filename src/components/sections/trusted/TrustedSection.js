@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ContinuousCarousel from "../../animation/ContinuosCarousel";
 import ContentContainer from "../../UI/ContentContainer";
-import Description from "../../UI/Description";
-import Title from "../../UI/Title";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import SectionHeader from "../../UI/SectionHeader";
@@ -34,6 +32,7 @@ export default function TrustedSection() {
 
   return (
     <motion.div
+      id="partners"
       ref={ref} // Attach observer to the section
       className="lg:pt-[90px] md:pt-[60px] pt-[30px] lg:pb-[60px] pb-[30px] bg-[#111111]"
       variants={sectionVariants}
@@ -42,8 +41,8 @@ export default function TrustedSection() {
       animate={hasTriggered ? "visible" : inView ? "visible" : "hidden"}>
       <ContentContainer>
         <SectionHeader
-          titleFirstPart={"Trusted"}
-          titleSecondPart={"Partners"}
+          titleFirstPart={t("trustedSection.title1")}
+          titleSecondPart={t("trustedSection.title2")}
           isDescription={true}
           description={t("trustedSection.description")}
           inView={inView}

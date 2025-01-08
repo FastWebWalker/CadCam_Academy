@@ -45,10 +45,10 @@ const Header = () => {
 
   // Navigation items with their corresponding section IDs
   const navItems = [
-    { text: t("header.navigation.aboutUs"), sectionId: "aboutUs" },
+    { text: t("header.navigation.aboutUs"), sectionId: "about-us" },
     { text: t("header.navigation.services"), sectionId: "services" },
     { text: t("header.navigation.equipment"), sectionId: "equipment" },
-    { text: t("header.navigation.ourTeam"), sectionId: "ourTeam" },
+    { text: t("header.navigation.ourTeam"), sectionId: "team" },
     { text: t("header.navigation.gallery"), sectionId: "gallery" },
   ];
 
