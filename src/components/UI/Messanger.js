@@ -50,7 +50,7 @@ const MessengerComponent = () => {
 
         <button
           onClick={toggleMessenger}
-          className={`lg:w-[68px] lg:h-[45px] w-[58px] h-[35px] py-[6.5px] pl-[21px] pr-[15px] rounded-l-full flex items-center justify-center transition-colors duration-200 ${
+          className={`w-[68px] h-[45px] py-[6.5px] pl-[21px] pr-[15px] rounded-l-full flex items-center justify-center transition-colors duration-200 ${
             isOpen ? "bg-white" : "bg-red-600 pr-1 pt-1"
           }`}>
           {isOpen ? (
