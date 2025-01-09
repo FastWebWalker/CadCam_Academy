@@ -22,7 +22,7 @@ export default function Interested() {
 
       {/* ContentContainer with overflow-hidden */}
       <ContentContainer>
-        <div className="interested-text overflow-hidden mb-[3.4vh] text-[3.61vw] font-normal uppercase">
+        <div className="interested-text overflow-hidden mb-[3.4vh] text-[3.61vw] uppercase">
           {text.split("").map((letter, index) => (
             <span
               key={index}
