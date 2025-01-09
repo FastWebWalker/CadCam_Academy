@@ -67,7 +67,9 @@ export default function Footer() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleSubmit}>
-                  <Button variant="primary">{t("buttons.callUs")}</Button>
+                  <Button variant="primary" href={"tel:+380 67 611 66 77"}>
+                    {t("buttons.callUs")}
+                  </Button>
                 </motion.button>
               </div>
             </div>

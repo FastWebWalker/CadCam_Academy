@@ -114,13 +114,13 @@ export default function OurTeam() {
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
               <div className="flex flex-col gap-[21px] text-white">
-                <div className="flex justify-between items-center gap-[15px]">
+                <div className="flex sm:justify-between sm:items-center justify-center items-start gap-[15px] flex-wrap sm:flex-row flex-col">
                   <h3 className="text-[26px]">{review.name}</h3>
                   <Description className="text-right">
                     {review.position}
                   </Description>
                 </div>
-                <div className="w-full max-h-[45078px] h-auto">
+                <div className="w-full sm:max-h-[450px] max-h-[420px] h-auto">
                   <img
                     src={review.image}
                     alt={review.name}

@@ -104,7 +104,12 @@ const Header = () => {
           <div className="gap-3 justify-center items-center hidden [@media(min-width:1160px)]:flex">
             <SwitchButton />
             <button onClick={handleSubmit}>
-              <Button className="uppercase" variant="primary">
+              <Button
+                className="uppercase"
+                variant="primary"
+                href={
+                  "https://linktr.ee/cadcam.energy?fbclid=PAZXh0bgNhZW0CMTEAAaa46QP9IarbG1rzAN0JNsHZFhlNCriz-jwt3YzvFkdLKK-LycleLLrKmYE_aem_okc2QPndI0ezu_-I2PEmzw"
+                }>
                 {t("header.buttons.getInTouch")}
               </Button>
             </button>
@@ -142,7 +147,9 @@ const Header = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={handleSubmit}>
-                  <Button variant="primary">{t("buttons.callUs")}</Button>
+                  <Button variant="primary" href={"tel:+380 67 611 66 77"}>
+                    {t("buttons.callUs")}
+                  </Button>
                 </motion.button>
               </div>
             </motion.nav>

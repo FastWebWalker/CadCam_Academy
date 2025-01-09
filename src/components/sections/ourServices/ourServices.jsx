@@ -18,8 +18,18 @@ const DescriptionPart = () => {
     <div className="flex flex-col justify-between text-[#111111]">
       <Description>{t("servicesSection.subtitle")}</Description>
       <div className="flex sm:justify-end gap-4 mt-8 flex-wrap justify-start">
-        <Button variant="outline-black">{t("buttons.getAPrice")}</Button>
-        <Button variant="outline-red">{t("buttons.makeAnOrder")}</Button>
+        <Button
+          variant="outline-black"
+          href={
+            "https://drive.google.com/file/d/1qTz38WGu5gwCuUvRUR5XcR6r4S64R2tr/view"
+          }>
+          {t("buttons.getAPrice")}
+        </Button>
+        <Button
+          variant="outline-red"
+          href={"https://order.cadcam.energy/login"}>
+          {t("buttons.makeAnOrder")}
+        </Button>
       </div>
     </div>
   );

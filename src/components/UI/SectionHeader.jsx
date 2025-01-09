@@ -33,7 +33,7 @@ export default function WhyChooseUs({
       </motion.div>
 
       <motion.div
-        className="lg:max-w-[395px] lg:text-right"
+        className="lg:max-w-[500px] lg:text-right"
         initial={{ opacity: 0, x: 50 }}
         animate={
           inView

@@ -61,7 +61,10 @@ const HeroSection = ({ image }) => {
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.95 }}>
-                <Button withoutArrow={isMobileSmall} variant="secondary">
+                <Button
+                  withoutArrow={isMobileSmall}
+                  variant="secondary"
+                  href={"https://order.cadcam.energy/login"}>
                   {t("buttons.makeAnOrder")}
                 </Button>
               </motion.button>
