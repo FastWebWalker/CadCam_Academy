@@ -3,7 +3,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import url(https://fonts.googleapis.com/css?family=Inter:200,300,regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Inter:200,300,regular,500&display=swap);
 
 body {
   margin: 0;

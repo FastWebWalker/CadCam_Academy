@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence, inView } from "framer-motion";
 import ContentContainer from "../../UI/ContentContainer";
-import Description from "../../UI/Description";
-import Title from "../../UI/Title";
 import { useTranslation } from "react-i18next";
 import fullAnatomy0 from "../../../images/sections/gallery/fullAnatomy/IMG_1812.PNG";
 import fullAnatomy1 from "../../../images/sections/gallery/fullAnatomy/IMG_1813.PNG";
@@ -34,6 +32,8 @@ import threeD3 from "../../../images/sections/gallery/3d/220823_Senergy-4 (1).pn
 import threeD4 from "../../../images/sections/gallery/3d/image 68.png";
 import threeD5 from "../../../images/sections/gallery/3d/DSC_2928.jfif";
 import SectionHeader from "../../UI/SectionHeader";
+import Button from "../../UI/Button";
+import ImageModal from "./ImageModal";
 
 const titaniumBeams = [];
 const crowns = [
@@ -62,7 +62,9 @@ const all = [...fullAnatomy, ...crowns, ...blocks, ...threeDPrinting];
 
 const GallerySection = () => {
   const { t } = useTranslation();
-  const [currentCompany, setCurrentCompany] = useState(t("galleryPage.tabs.0"));
+  const [currentCompany, setCurrentCompany] = useState();
+  const [showAll, setShowAll] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const logos = [
     t("galleryPage.tabs.0"),
@@ -72,6 +74,10 @@ const GallerySection = () => {
     t("galleryPage.tabs.4"),
     t("galleryPage.tabs.5"),
   ];
+
+  useEffect(() => {
+    setCurrentCompany(t("galleryPage.tabs.0"));
+  }, []);
 
   const getImagesForCompany = (company) => {
     switch (company) {
@@ -115,6 +121,18 @@ const GallerySection = () => {
     },
   };
 
+  const getCurrentImages = () => {
+    const images = getImagesForCompany(currentCompany);
+    if (window.innerWidth <= 768 && !showAll) {
+      return images.slice(0, 5);
+    }
+    return images;
+  };
+
+  const handleShowMore = () => {
+    setShowAll(true);
+  };
+
   return (
     <section className="py-12 bg-white">
       <ContentContainer>
@@ -127,17 +145,18 @@ const GallerySection = () => {
           titlePl={"lg:pl-[40%]"}
         />
         {/* Tabs */}
-        <div className="flex flex-wrap justify-between gap-8 mb-12">
+        <div className="flex flex-wrap justify-between gap-[22px] sm:mb-[44px] mb-[32px]">
           {logos.map((logo) => (
             <button
               key={logo.name}
               onClick={() => setCurrentCompany(logo)}
-              className={`relative transition-all duration-300 px-4 py-2 ${
-                currentCompany === logo.name
-                  ? "border-l-2 border-redCustom"
-                  : ""
-              }`}>
-              <div className="sm:text-[24px] text-[20px]">{logo}</div>
+              className={`relative transition-all duration-300`}>
+              <div
+                className={`sm:text-[24px] text-[20px]  ${
+                  currentCompany === logo ? "font-medium" : ""
+                }`}>
+                {logo}
+              </div>
             </button>
           ))}
         </div>
@@ -150,12 +169,13 @@ const GallerySection = () => {
             initial="initial"
             animate="animate"
             exit="exit"
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {getImagesForCompany(currentCompany).map((image, index) => (
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[22px]">
+            {getCurrentImages(currentCompany).map((image, index) => (
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="aspect-square relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                onClick={() => setIsModalOpen(true)}
+                className="aspect-square relative overflow-hidden shadow-lg cursor-pointer">
                 <img
                   src={image}
                   alt={`Gallery item ${index + 1}`}
@@ -165,7 +185,22 @@ const GallerySection = () => {
             ))}
           </motion.div>
         </AnimatePresence>
+        {window.innerWidth <= 768 &&
+          !showAll &&
+          getImagesForCompany(currentCompany).length > 5 && (
+            <div className="mt-8 text-center">
+              <Button onClick={handleShowMore} variant="outline-red">
+                {t("buttons.showAllImages")}
+              </Button>
+            </div>
+          )}
       </ContentContainer>
+      {isModalOpen && (
+        <ImageModal
+          images={getCurrentImages(currentCompany)}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </section>
   );
 };
