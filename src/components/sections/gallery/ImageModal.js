@@ -67,9 +67,9 @@ const ImageModal = ({ images, initialIndex, onClose }) => {
               <NavigationArrow
                 className={""}
                 size={isMobileSmall ? 39 : 52}
-                startColor={"#000000"}
+                startColor={"#ffffff"}
                 endColor={"#BA0315"}
-                startBorderColor={"border-[#000000]"}
+                startBorderColor={"border-[#ffffff]"}
                 endBorderColor={"border-[#BA0315]"}
                 padding={"lg:p-[26px] md:p-[14px] p-[12.5px]"}
               />
@@ -78,9 +78,9 @@ const ImageModal = ({ images, initialIndex, onClose }) => {
               <NavigationArrow
                 className={"rotate-180"}
                 size={isMobileSmall ? 39 : 52}
-                startColor={"#000000"}
+                startColor={"#ffffff"}
                 endColor={"#BA0315"}
-                startBorderColor={"border-[#000000]"}
+                startBorderColor={"border-[#ffffff]"}
                 endBorderColor={"border-[#BA0315]"}
                 padding={"lg:p-[26px] md:p-[14px] p-[12.5px]"}
               />
@@ -103,24 +103,24 @@ const ImageModal = ({ images, initialIndex, onClose }) => {
           className="h-full w-full">
           {!isMobile && (
             <>
-              <button className="swiper-prev-gallery-modal z-50 absolute top-1/2 -translate-y-1/2 left-4 w-[80px] h-[40px] flex items-center justify-center rounded-[30px] transition-colors duration-300">
+              <button className="swiper-prev-gallery-modal z-50 absolute top-1/2 -translate-y-1/2 left-[40px] w-[80px] h-[40px] flex items-center justify-center rounded-[30px] transition-colors duration-300">
                 <NavigationArrow
                   className={""}
                   size={isMobileSmall ? 39 : 52}
-                  startColor={"#000000"}
+                  startColor={"#ffffff"}
                   endColor={"#BA0315"}
-                  startBorderColor={"border-[#000000]"}
+                  startBorderColor={"border-[#ffffff]"}
                   endBorderColor={"border-[#BA0315]"}
                   padding={"lg:p-[26px] md:p-[14px] p-[12.5px]"}
                 />
               </button>
-              <button className="swiper-next-gallery-modal z-50 absolute top-1/2 -translate-y-1/2 right-4 w-[80px] h-[40px] flex items-center justify-center rounded-[30px]  transition-colors duration-300">
+              <button className="swiper-next-gallery-modal z-50 absolute top-1/2 -translate-y-1/2 right-[40px] w-[80px] h-[40px] flex items-center justify-center rounded-[30px]  transition-colors duration-300">
                 <NavigationArrow
                   className={"rotate-180"}
                   size={isMobileSmall ? 39 : 52}
-                  startColor={"#000000"}
+                  startColor={"#ffffff"}
                   endColor={"#BA0315"}
-                  startBorderColor={"border-[#000000]"}
+                  startBorderColor={"border-[#ffffff]"}
                   endBorderColor={"border-[#BA0315]"}
                   padding={"lg:p-[26px] md:p-[14px] p-[12.5px]"}
                 />

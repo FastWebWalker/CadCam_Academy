@@ -17,8 +17,8 @@ const DescriptionPart = () => {
   return (
     <div className="flex flex-col justify-between text-[#111111]">
       <Description>{t("servicesSection.subtitle")}</Description>
-      <div className="flex justify-end gap-4 mt-8">
-        <Button variant="outline">{t("buttons.getAPrice")}</Button>
+      <div className="flex sm:justify-end gap-4 mt-8 flex-wrap justify-start">
+        <Button variant="outline-black">{t("buttons.getAPrice")}</Button>
         <Button variant="outline-red">{t("buttons.makeAnOrder")}</Button>
       </div>
     </div>

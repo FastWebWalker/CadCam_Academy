@@ -84,7 +84,7 @@ const Header = () => {
           <Logo />
 
           {/* Desktop Navigation */}
-          <nav className="hidden [@media(min-width:960px)]:block">
+          <nav className="hidden [@media(min-width:1160px)]:block">
             <ul className="flex justify-center items-center gap-[42px] max-lg:gap-[24px]">
               {navItems.map(({ text, sectionId }) => (
                 <motion.li
@@ -101,7 +101,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className="gap-3 justify-center items-center hidden [@media(min-width:960px)]:flex">
+          <div className="gap-3 justify-center items-center hidden [@media(min-width:1160px)]:flex">
             <SwitchButton />
             <button onClick={handleSubmit}>
               <Button className="uppercase" variant="primary">
@@ -121,7 +121,7 @@ const Header = () => {
               animate={{ opacity: 1, height: "100vh" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="[@media(min-width:960px)]:hidden overflow-hidden absolute top-0 left-0 w-[100vw] bg-[#111111] flex flex-col justify-center gap-[50px] p-[44px] items-center">
+              className="[@media(min-width:1160px)]:hidden overflow-hidden absolute top-0 left-0 w-[100vw] bg-[#111111] flex flex-col justify-center gap-[50px] p-[44px] items-center">
               <SwitchButton />
               <ul className="flex flex-col justify-center items-center text-[25px] gap-[42px]">
                 {navItems.map(({ text, sectionId }) => (
@@ -137,14 +137,14 @@ const Header = () => {
                   </motion.li>
                 ))}
               </ul>
-              <motion.button
-                onClick={handleSubmit}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}>
-                <Button variant="red-white" className="uppercase z-50">
-                  {t("header.buttons.getInTouch")}
-                </Button>
-              </motion.button>
+              <div className="flex-grow-0">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={handleSubmit}>
+                  <Button variant="primary">{t("buttons.callUs")}</Button>
+                </motion.button>
+              </div>
             </motion.nav>
           )}
         </AnimatePresence>

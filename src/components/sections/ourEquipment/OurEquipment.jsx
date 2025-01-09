@@ -22,9 +22,9 @@ import { useTranslation } from "react-i18next";
 const DescriptionPart = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col justify-between text-[#111111] items-end">
+    <div className="flex flex-col justify-between text-[#111111] sm:items-end items-start">
       <Description>{t("ourEquipment.description")}</Description>
-      <Button variant="outline-red" className="mt-8">
+      <Button variant="outline-red" className="mt-8 ">
         {t("buttons.buyAMachine")}
       </Button>
     </div>

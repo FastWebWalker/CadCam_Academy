@@ -17,84 +17,73 @@ const MessengerComponent = () => {
       name: "Phone",
       icon: <img src={image4} alt="phone" />,
       color: "bg-emerald-500",
-      link: "tel:+380683853535",
+      link: "tel:+380 67 611 66 77",
     },
     {
       name: "Messenger",
       icon: <img src={image2} alt="phone" />,
       color: "bg-blue-600",
-      link: "https://www.facebook.com/messages/t/191383417921128",
+      link: "https://www.messenger.com/t/1909464225772588/?messaging_source=source%3Apages%3Amessage_shortlink&source_id=1441792&recurring_notification=0",
     },
     {
       name: "Viber",
       icon: <img src={image1} alt="phone" />,
       color: "bg-purple-600",
-      link: "viber://chat?number=+380683853535",
+      link: "viber://chat?number=+380676116677",
     },
     {
       name: "Telegram",
       icon: <img src={image3} alt="phone" />,
       color: "bg-sky-500",
-      link: "https://t.me/SmileEnergyGroup",
+      link: "https://t.me/CadCamEnergy",
     },
   ];
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-4 right-0 z-50">
       <motion.div
         className="relative"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.3 }}>
         {/* Main toggle button */}
-        <motion.button
+
+        <button
           onClick={toggleMessenger}
-          className={`bg-transparent m-1 rounded-full border-[0.5px] lg:w-[91px] lg:h-[91px] w-[71px] h-[71px] flex justify-center items-center ${
-            isOpen ? "border-white" : "border-redCustom"
-          }`}
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}>
-          <button
-            className={`lg:w-[67px] lg:h-[67px] w-[52px] h-[52px] rounded-full flex items-center justify-center transition-colors duration-200 ${
-              isOpen ? "bg-white" : "bg-red-600 pr-1 pt-1"
-            }`}>
-            {isOpen ? (
-              <motion.svg
-                viewBox="0 0 24 24"
-                className="w-6 h-6 text-black"
-                stroke="currentColor"
+          className={`lg:w-[68px] lg:h-[45px] w-[58px] h-[35px] py-[6.5px] pl-[21px] pr-[15px] rounded-l-full flex items-center justify-center transition-colors duration-200 ${
+            isOpen ? "bg-white" : "bg-red-600 pr-1 pt-1"
+          }`}>
+          {isOpen ? (
+            <motion.svg
+              viewBox="0 0 24 24"
+              className="w-6 h-6 text-black"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              fill="none"
+              whileHover={{ rotate: 180 }}>
+              <path d="M18 6L6 18" />
+              <path d="M6 6l12 12" />
+            </motion.svg>
+          ) : (
+            <motion.svg
+              width="32"
+              height="33"
+              viewBox="0 0 32 33"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              whileHover={{ rotate: 360 }}>
+              <path
+                d="M5.33333 8.50002L13.4768 14.6497L13.4796 14.652C14.3838 15.3151 14.8362 15.6468 15.3317 15.775C15.7696 15.8883 16.23 15.8883 16.668 15.775C17.1639 15.6467 17.6176 15.314 18.5234 14.6497C18.5234 14.6497 23.7468 10.6413 26.6667 8.50002M4 21.5669V11.4336C4 9.94014 4 9.19285 4.29065 8.62242C4.54631 8.12065 4.95396 7.713 5.45573 7.45734C6.02616 7.16669 6.77345 7.16669 8.26693 7.16669H23.7336C25.2271 7.16669 25.9728 7.16669 26.5432 7.45734C27.045 7.713 27.454 8.12065 27.7096 8.62242C28 9.19229 28 9.93868 28 11.4292V21.5715C28 23.062 28 23.8073 27.7096 24.3772C27.454 24.879 27.045 25.2873 26.5432 25.543C25.9733 25.8334 25.228 25.8334 23.7375 25.8334H8.26255C6.77199 25.8334 6.0256 25.8334 5.45573 25.543C4.95396 25.2873 4.54631 24.879 4.29065 24.3772C4 23.8068 4 23.0604 4 21.5669Z"
+                stroke="white"
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                fill="none"
-                whileHover={{ rotate: 180 }}>
-                <path d="M18 6L6 18" />
-                <path d="M6 6l12 12" />
-              </motion.svg>
-            ) : (
-              <motion.svg
-                width="29"
-                height="29"
-                viewBox="0 0 29 29"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                whileHover={{ rotate: 360 }}>
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M26.9702 2.02977C27.1839 2.24345 27.1839 2.5899 26.9702 2.80358L13.6786 16.0952C13.4649 16.3089 13.1185 16.3089 12.9048 16.0952C12.6911 15.8816 12.6911 15.5351 12.9048 15.3214L26.1964 2.02977C26.4101 1.81609 26.7566 1.81609 26.9702 2.02977Z"
-                  fill="white"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M26.9703 2.02978C27.1189 2.17842 27.1692 2.39905 27.0998 2.59745L18.6415 26.7641C18.5674 26.9759 18.3715 27.1209 18.1473 27.1301C17.9232 27.1392 17.7161 27.0106 17.625 26.8056L12.8771 16.1229L2.19445 11.375C1.98944 11.2839 1.86082 11.0769 1.86996 10.8527C1.87911 10.6286 2.02417 10.4327 2.23592 10.3586L26.4026 1.90024C26.601 1.8308 26.8216 1.88115 26.9703 2.02978ZM3.9001 10.9355L13.5139 15.2084C13.6377 15.2634 13.7367 15.3623 13.7917 15.4861L18.0645 25.0999L25.6915 3.30856L3.9001 10.9355Z"
-                  fill="white"
-                />
-              </motion.svg>
-            )}
-          </button>
-        </motion.button>
+              />
+            </motion.svg>
+          )}
+        </button>
 
         {/* Messenger apps */}
         <motion.div
@@ -109,7 +98,7 @@ const MessengerComponent = () => {
           {messengerApps.map((app, index) => (
             <motion.div
               key={index}
-              className={` items-center gap-2`}
+              className={`items-center gap-2`}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}>
               <a

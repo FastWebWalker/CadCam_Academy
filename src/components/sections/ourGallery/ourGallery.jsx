@@ -23,7 +23,7 @@ const InfiniteImageSlider = () => {
             <img
               src={image}
               alt={`CAD CAM Equipment ${index + 1}`}
-              className="md:w-[348px] w-[157px] h-auto object-cover"
+              className="md:w-[348px] w-[230px] h-auto object-cover"
             />
           </div>
         ))}
@@ -48,7 +48,7 @@ const InfiniteImageSlider = () => {
 const DescriptionPart = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col justify-between text-[#111111] items-end">
+    <div className="flex flex-col justify-between text-[#111111] sm:items-end items-start">
       <Description>{t("ourGallery.description")}</Description>
       <Button useLink to={"/gallery"} variant="outline-red" className="mt-8">
         {t("buttons.viewAllWorks")}

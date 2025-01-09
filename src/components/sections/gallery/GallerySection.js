@@ -2,52 +2,47 @@ import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence, inView } from "framer-motion";
 import ContentContainer from "../../UI/ContentContainer";
 import { useTranslation } from "react-i18next";
-import fullAnatomy0 from "../../../images/sections/gallery/fullAnatomy/IMG_1812.PNG";
-import fullAnatomy1 from "../../../images/sections/gallery/fullAnatomy/IMG_1813.PNG";
-import fullAnatomy2 from "../../../images/sections/gallery/fullAnatomy/IMG_1814.PNG";
-import fullAnatomy3 from "../../../images/sections/gallery/fullAnatomy/IMG_1815.PNG";
-import fullAnatomy4 from "../../../images/sections/gallery/fullAnatomy/IMG_1816.PNG";
-import fullAnatomy5 from "../../../images/sections/gallery/fullAnatomy/10102023_Contour-1.png";
-import fullAnatomy6 from "../../../images/sections/gallery/fullAnatomy/10102023_Contour-3 (1).png";
-import crown1 from "../../../images/sections/gallery/crowns/05102023_Contour-2.2.png";
-import crown2 from "../../../images/sections/gallery/crowns/08112023_Contour-3.png";
-import crown3 from "../../../images/sections/gallery/crowns/10102023_Contour-1.png";
-import crown4 from "../../../images/sections/gallery/crowns/10102023_Contour-3 (1).png";
-import crown5 from "../../../images/sections/gallery/crowns/10102023_Contour_1.3.png";
-import crown6 from "../../../images/sections/gallery/crowns/13092023_CadCam-2.png";
-import crown7 from "../../../images/sections/gallery/crowns/15092023_Contour-2-1.png";
-import crown8 from "../../../images/sections/gallery/crowns/15092023_Contour-2.png";
-import crown9 from "../../../images/sections/gallery/crowns/27092023_Contour-3.png";
-import block1 from "../../../images/sections/gallery/blocks/02102023_Contour-0.png";
-import block2 from "../../../images/sections/gallery/blocks/02102023_Contour-1.png";
-import block3 from "../../../images/sections/gallery/blocks/220823_Senergy-4 (1).png";
-import block4 from "../../../images/sections/gallery/blocks/250823_Senergy-2-2.png";
-import block5 from "../../../images/sections/gallery/blocks/250823_Senergy-3-2.png";
-import block6 from "../../../images/sections/gallery/blocks/250823_Senergy-4-1.png";
-import block7 from "../../../images/sections/gallery/blocks/28092023_Senergy-4.png";
-import block8 from "../../../images/sections/gallery/blocks/28092023_Senergy-6.png";
-import threeD1 from "../../../images/sections/gallery/3d/10112023_CadCam-1.png";
-import threeD2 from "../../../images/sections/gallery/3d/image 67.png";
-import threeD3 from "../../../images/sections/gallery/3d/220823_Senergy-4 (1).png";
-import threeD4 from "../../../images/sections/gallery/3d/image 68.png";
-import threeD5 from "../../../images/sections/gallery/3d/DSC_2928.jfif";
+import fullAnatomy0 from "../../../images/sections/gallery/fullAnatomy/05102023_Contour-2.2.png";
+import fullAnatomy1 from "../../../images/sections/gallery/fullAnatomy/08112023_Contour-3.png";
+import fullAnatomy2 from "../../../images/sections/gallery/fullAnatomy/10102023_Contour_1.3.png";
+import fullAnatomy3 from "../../../images/sections/gallery/fullAnatomy/13092023_CadCam-2.png";
+import fullAnatomy4 from "../../../images/sections/gallery/fullAnatomy/15092023_Contour-2-1.png";
+import fullAnatomy5 from "../../../images/sections/gallery/fullAnatomy/15092023_Contour-2.png";
+import fullAnatomy6 from "../../../images/sections/gallery/fullAnatomy/20092023_Contour.png";
+import fullAnatomy7 from "../../../images/sections/gallery/fullAnatomy/26102023_Contour-2.png";
+import fullAnatomy8 from "../../../images/sections/gallery/fullAnatomy/27092023_Contour-3.png";
+
+import crown1 from "../../../images/sections/gallery/crowns/02102023_Contour-0.png";
+import crown2 from "../../../images/sections/gallery/crowns/02102023_Contour-1.png";
+import crown3 from "../../../images/sections/gallery/crowns/220823_Senergy-4 (1) (2).png";
+import crown4 from "../../../images/sections/gallery/crowns/250823_Senergy-2-2.png";
+import crown5 from "../../../images/sections/gallery/crowns/250823_Senergy-3-2.png";
+import crown6 from "../../../images/sections/gallery/crowns/250823_Senergy-4-1.png";
+import crown7 from "../../../images/sections/gallery/crowns/28092023_Senergy-4.png";
+import crown8 from "../../../images/sections/gallery/crowns/28092023_Senergy-6.png";
+
+import block1 from "../../../images/sections/gallery/blocks/10112023_CadCam-1.png";
+import block2 from "../../../images/sections/gallery/blocks/image 67.png";
+
+import threeD1 from "../../../images/sections/gallery/3d/220823_Senergy-4 (1).png";
+import threeD2 from "../../../images/sections/gallery/3d/image 68.png";
+import threeD3 from "../../../images/sections/gallery/3d/DSC_2928.jfif";
+
+import titBeams1 from "../../../images/sections/gallery/titanicBeams/10102023_Contour-1.png";
+import titBeams2 from "../../../images/sections/gallery/titanicBeams/10102023_Contour-3 (1).png";
+import titBeams3 from "../../../images/sections/gallery/titanicBeams/IMG_1812.PNG";
+import titBeams4 from "../../../images/sections/gallery/titanicBeams/IMG_1813.PNG";
+import titBeams5 from "../../../images/sections/gallery/titanicBeams/IMG_1814.PNG";
+import titBeams6 from "../../../images/sections/gallery/titanicBeams/IMG_1815.PNG";
+import titBeams7 from "../../../images/sections/gallery/titanicBeams/IMG_1816.PNG";
+
 import SectionHeader from "../../UI/SectionHeader";
 import Button from "../../UI/Button";
 import ImageModal from "./ImageModal";
 
 const titaniumBeams = [];
-const crowns = [
-  crown1,
-  crown2,
-  crown3,
-  crown4,
-  crown5,
-  crown6,
-  crown7,
-  crown8,
-  crown9,
-];
-const blocks = [block1, block2, block3, block4, block5, block6, block7, block8];
+const crowns = [crown1, crown2, crown3, crown4, crown5, crown6, crown7, crown8];
+const blocks = [block1, block2];
 const fullAnatomy = [
   fullAnatomy0,
   fullAnatomy1,
@@ -56,9 +51,27 @@ const fullAnatomy = [
   fullAnatomy4,
   fullAnatomy5,
   fullAnatomy6,
+  fullAnatomy7,
+  fullAnatomy8,
 ];
-const threeDPrinting = [threeD1, threeD2, threeD3, threeD4, threeD5];
-const all = [...fullAnatomy, ...crowns, ...blocks, ...threeDPrinting];
+const threeDPrinting = [threeD1, threeD2, threeD3];
+
+const titanicBeams = [
+  titBeams1,
+  titBeams2,
+  titBeams3,
+  titBeams4,
+  titBeams5,
+  titBeams6,
+  titBeams7,
+];
+const all = [
+  ...fullAnatomy,
+  ...crowns,
+  ...blocks,
+  ...threeDPrinting,
+  ...titanicBeams,
+];
 
 const GallerySection = () => {
   const { t } = useTranslation();
@@ -84,7 +97,7 @@ const GallerySection = () => {
       case t("galleryPage.tabs.0"):
         return all;
       case t("galleryPage.tabs.1"):
-        return titaniumBeams;
+        return titanicBeams;
       case t("galleryPage.tabs.2"):
         return crowns;
       case t("galleryPage.tabs.3"):

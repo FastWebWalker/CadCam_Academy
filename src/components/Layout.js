@@ -4,6 +4,8 @@ import i18n from "../i18n/i18n";
 import { Outlet } from "react-router-dom";
 import { useMediaQuery } from "@mui/material";
 import Footer from "./sections/footer/Footer";
+import MessengerComponent from "../components/UI/Messanger";
+import Cookies from "../components/sections/cookies/Cookies"
 
 export default function Layout() {
   const isMobile = useMediaQuery("(max-width: 500px");
@@ -14,8 +16,8 @@ export default function Layout() {
         <Header />
         <Outlet />
         <Footer />
-        {/* <MessengerComponent /> */}
-        {/* <Cookies /> */}
+        <MessengerComponent />
+        <Cookies />
       </I18nextProvider>
     </>
   );

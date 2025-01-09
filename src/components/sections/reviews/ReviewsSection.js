@@ -50,6 +50,7 @@ const NavigationButtons = () => {
 
 export default function ReviewsSection() {
   const isLargeDesktop = useMediaQuery("(min-width:1280px)");
+  const isNotDesktop = useMediaQuery("(max-width: 768px)");
   const slides = isLargeDesktop ? 2 : 1;
   const { t } = useTranslation();
 
@@ -145,7 +146,7 @@ export default function ReviewsSection() {
                     <img
                       src={review.image}
                       alt={review.name}
-                      className="md:w-[250px] md:h-[196px] w-full h-auto md:object-cover object-contain rounded-sm grayscale"
+                      className="md:w-[250px] md:h-[196px] w-full h-auto max-h-[250px] md:object-cover object-cover rounded-sm grayscale"
                     />
                   </div>
 
@@ -168,7 +169,9 @@ export default function ReviewsSection() {
           </Swiper>
 
           {/* Custom Pagination Container */}
-          <div className="swiper-custom-pagination-reviews flex justify-center lg:mt-[52px] md:mt-[30px] mt-[20px]"></div>
+          {isNotDesktop && (
+            <div className="swiper-custom-pagination-reviews gap-[4px] flex justify-center lg:mt-[52px] md:mt-[30px] mt-[20px]"></div>
+          )}
         </div>
       </ContentContainer>
 
@@ -185,31 +188,17 @@ export default function ReviewsSection() {
 
         /* Custom Pagination Styles */
         .swiper-custom-bullet-reviews {
-          width: 37px;
-          height: 1.5px;
-          margin: 0 4px;
+          width: 9px;
+          height: 9px;
           display: inline-block;
-          opacity: 0.5;
-          background: #ffffff;
+          background: #464646;
           cursor: pointer;
           transition: all 0.3s ease;
-        }
-
-        /* Custom Pagination Styles */
-        .swiper-custom-bullet-products {
-          width: 37px;
-          height: 1.5px;
-          margin: 0 4px;
-          display: inline-block;
-          opacity: 0.5;
-          background: #191919;
-          cursor: pointer;
-          transition: all 0.3s ease;
+          border-radius: 50%;
         }
 
         .swiper-custom-bullet-active {
-          opacity: 1;
-          background: #a40004;
+          background: #ba0315;
         }
       `}</style>
     </motion.section>

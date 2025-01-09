@@ -5,20 +5,16 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 
-import partner1 from "../../images/sections/trusted/partner-1.svg";
-import partner2 from "../../images/sections/trusted/partner-2.svg";
-import partner3 from "../../images/sections/trusted/partner-3.svg";
-import partner4 from "../../images/sections/trusted/partner-4.svg";
-import partner5 from "../../images/sections/trusted/partner-5.svg";
-import partner6 from "../../images/sections/trusted/partner-6.svg";
-import partner7 from "../../images/sections/trusted/partner-7.svg";
-import partner8 from "../../images/sections/trusted/partner-8.svg";
-import partner9 from "../../images/sections/trusted/partner-9.svg";
-import partner10 from "../../images/sections/trusted/partner-10.svg";
-import partner11 from "../../images/sections/trusted/partner-11.svg";
-import partner12 from "../../images/sections/trusted/partner-12.svg";
-import partner13 from "../../images/sections/trusted/partner-13.svg";
-import partner14 from "../../images/sections/trusted/partner-14.svg";
+import partner1 from "../../images/sections/trusted/partner1.svg";
+import partner2 from "../../images/sections/trusted/partner2.svg";
+import partner3 from "../../images/sections/trusted/partner3.svg";
+import partner4 from "../../images/sections/trusted/partner4.svg";
+import partner5 from "../../images/sections/trusted/partner5.svg";
+import partner6 from "../../images/sections/trusted/partner6.svg";
+import partner7 from "../../images/sections/trusted/partner7.svg";
+import partner8 from "../../images/sections/trusted/partner8.svg";
+import partner9 from "../../images/sections/trusted/partner9.svg";
+
 import { useMediaQuery } from "@mui/material";
 
 const SwiperCarousel = () => {
@@ -37,11 +33,6 @@ const SwiperCarousel = () => {
     partner7,
     partner8,
     partner9,
-    partner10,
-    partner11,
-    partner12,
-    partner13,
-    partner14,
   ];
 
   // Duplicate images to ensure smooth looping

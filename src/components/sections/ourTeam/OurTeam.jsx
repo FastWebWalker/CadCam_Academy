@@ -45,7 +45,8 @@ export default function OurTeam() {
   const isLargeDesktop = useMediaQuery("(min-width:1280px)");
   const isDesktop = useMediaQuery("(min-width:1024px)");
   const isTablet = useMediaQuery("(min-width:768px)");
-  const slides = isLargeDesktop ? 3 : isDesktop ? 2 : isTablet ? 1.5 : 1.4;
+  const isMobile = useMediaQuery("(max-width: 450px)");
+  const slides = isLargeDesktop ? 3 : isDesktop ? 2 : isTablet ? 1.5 : 1.1;
   const { t } = useTranslation();
 
   const reviews = [
@@ -64,6 +65,11 @@ export default function OurTeam() {
       position: `${t("ourTeamSection.team.2.position")}`,
       image: image3,
     },
+    {
+      name: `${t("ourTeamSection.team.2.name")}`,
+      position: `${t("ourTeamSection.team.2.position")}`,
+      image: image3,
+    },
   ];
 
   return (
@@ -75,7 +81,7 @@ export default function OurTeam() {
           isDescription={false}
           inView={true}
           textIsWhite={true}
-          titlePl={"lg:pl-[35%]"}
+          titlePl={"xl:pl-[25%] lg:pl-[10%]"}
           descriptionPart={<NavigationButtons />}
         />
 
@@ -91,7 +97,7 @@ export default function OurTeam() {
 
         <Swiper
           modules={[Navigation]}
-          spaceBetween={72}
+          spaceBetween={isMobile ? 20 : 72}
           slidesPerView={slides}
           navigation={{
             nextEl: ".custom-swiper-next-team",
@@ -108,12 +114,18 @@ export default function OurTeam() {
           {reviews.map((review, index) => (
             <SwiperSlide key={index}>
               <div className="flex flex-col gap-[21px] text-white">
-                <div className="flex justify-between items-end gap-[15px]">
+                <div className="flex justify-between items-center gap-[15px]">
                   <h3 className="text-[26px]">{review.name}</h3>
-                  <Description>{review.position}</Description>
+                  <Description className="text-right">
+                    {review.position}
+                  </Description>
                 </div>
-                <div className="w-full md:h-[478px]">
-                  <img src={review.image} alt={review.name} />
+                <div className="w-full max-h-[45078px] h-auto">
+                  <img
+                    src={review.image}
+                    alt={review.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
             </SwiperSlide>

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const BurgerButton = memo(({ isOpen, toggleMenu }) => {
   return (
     <motion.button
-      className="[@media(min-width:960px)]:hidden z-50 w-10 h-10 flex items-center justify-center focus:outline-none"
+      className="[@media(min-width:1160px)]:hidden z-50 w-10 h-10 flex items-center justify-center focus:outline-none"
       onClick={toggleMenu}
       aria-label="Toggle menu"
       whileHover={{ rotate: 10 }}

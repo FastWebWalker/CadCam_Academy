@@ -39,7 +39,7 @@ export default function Footer() {
   return (
     <motion.footer
       transition={{ duration: 0.6 }}
-      className="pt-[56px] pb-[20px] bg-[#191919]"
+      className="pt-[56px] pb-[20px] bg-[#111111]"
       ref={footerRef}>
       <ContentContainer>
         <div className="flex flex-col justify-between">
@@ -59,7 +59,7 @@ export default function Footer() {
               </Description>
             </div>
             <div className="flex flex-col gap-[32px] justify-start md:items-end items-start">
-              <Description className="text-[20px] text-white">
+              <Description className="text-[20px] text-white max-w-[510px] text-right">
                 {t("footerSection.contactUs")}
               </Description>
               <div className="flex-grow-0">

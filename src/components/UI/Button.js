@@ -53,6 +53,16 @@ const Button = ({
           }`,
           arrow: `${isHovered ? "text-white" : "text-[#111111]"}`,
         };
+      case "outline-black":
+        return {
+          container: `${
+            isHovered ? "bg-[#111111]" : "bg-white"
+          } border-[#111111]  `,
+          content: `${
+            isHovered ? "bg-white text-[#111111]" : "bg-[#111111] text-white"
+          }`,
+          arrow: `${isHovered ? "text-white" : "text-[#111111]"}`,
+        };
       default:
         return {
           container: "border-[#BA0315] bg-transparent ",
@@ -73,7 +83,7 @@ const Button = ({
 
   const contentClasses = `
     flex-1 px-[21.15px] py-[10.5px]
-    tracking-wider
+    tracking-wider2
     font-normal rounded-full
     flex items-center justify-center
     transition-all duration-300 ease-in-out

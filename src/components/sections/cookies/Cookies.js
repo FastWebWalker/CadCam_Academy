@@ -42,7 +42,7 @@ export default function Cookies() {
             <div className="flex gap-[12px]">
               <div className="flex-grow-0">
                 <button onClick={handleAcceptCookies}>
-                  <Button withoutArrow>Accept</Button>
+                  <Button variant="outline-red">Accept</Button>
                 </button>
               </div>
 
@@ -50,7 +50,7 @@ export default function Cookies() {
                 <button onClick={handleCloseCookies}>
                   <Button
                     withoutArrow
-                    variant="red-white"
+                    variant="outline"
                     onClick={handleCloseCookies}>
                     Decline
                   </Button>
