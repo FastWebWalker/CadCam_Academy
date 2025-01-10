@@ -90,7 +90,12 @@ export default function MainTitleBlock() {
                 </motion.div>
               )}
             </div>
-            <div className="flex justify-center items-center gap-[20px] pl-[10%]">
+            <div
+              className={`flex  ${
+                i18n.language === "en"
+                  ? "justify-start"
+                  : "lg:justify-end justify-start"
+              }  items-center gap-[20px] pl-[10%]`}>
               <motion.div variants={textVariants}>
                 <HeroTitle>
                   {i18n.language === "en" ? (
@@ -101,7 +106,12 @@ export default function MainTitleBlock() {
                 </HeroTitle>
               </motion.div>
             </div>
-            <div className="flex lg:justify-between justify-end items-center pl-[15%]">
+            <div
+              className={`flex ${
+                i18n.language === "en"
+                  ? "lg:justify-between justify-start"
+                  : "lg:justify-end justify-start"
+              }  items-center pl-[15%]`}>
               <motion.div variants={textVariants}>
                 <HeroTitle>
                   {i18n.language === "en" ? (
@@ -148,7 +158,10 @@ export default function MainTitleBlock() {
               </motion.div>
             )}
           </div>
-          <div className="flex justify-center items-center gap-[20px] pl-[10%]">
+          <div
+            className={`flex ${
+              i18n.language === "en" ? "justify-start" : "justify-center"
+            } items-center gap-[20px] pl-[10%]`}>
             <motion.div variants={textVariants}>
               <HeroTitle>
                 {" "}
@@ -160,7 +173,12 @@ export default function MainTitleBlock() {
               </HeroTitle>
             </motion.div>
           </div>
-          <div className="flex lg:justify-end justify-end items-center pr-[10%]">
+          <div
+            className={`flex  ${
+              i18n.language === "en"
+                ? "justify-start"
+                : "lg:justify-end justify-start"
+            } items-center pl-[15%]`}>
             <motion.div variants={textVariants}>
               <HeroTitle>
                 {i18n.language === "en" ? (
