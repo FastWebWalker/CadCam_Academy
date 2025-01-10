@@ -6,15 +6,13 @@ import { useMediaQuery } from "@mui/material";
 import Footer from "./sections/footer/Footer";
 import MessengerComponent from "../components/UI/Messanger";
 import Cookies from "../components/sections/cookies/Cookies";
-import CustomCursor from "./UI/CustomCursor";
 
 export default function Layout() {
-  const isMobile = useMediaQuery("(max-width: 500px");
+  // const isMobile = useMediaQuery("(max-width: 500px");
   return (
     <>
       <I18nextProvider i18n={i18n}>
         {/* {!isMobile && <CustomCursor />} */}
-        <CustomCursor />
         <Header />
         <Outlet />
         <Footer />
