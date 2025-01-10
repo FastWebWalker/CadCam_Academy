@@ -35,7 +35,6 @@ export default function TrustedSection() {
       id="partners"
       ref={ref} // Attach observer to the section
       className="lg:pt-[90px] md:pt-[60px] pt-[30px] lg:pb-[60px] pb-[30px] bg-[#111111]"
-      variants={sectionVariants}
       initial="hidden"
       // animate={inView ? "visible" : "hidden"} // Trigger animation based on visibility
       animate={hasTriggered ? "visible" : inView ? "visible" : "hidden"}>

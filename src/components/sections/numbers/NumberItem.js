@@ -79,7 +79,7 @@ export default function NumberItem({ title, description, className }) {
         </div>
       </motion.h2>
       <motion.p
-        className="text-[#111111] lg:max-w-[196px] min-h-[48px] md:max-w-[170px] sm:max-w-[170px] max-w-[130px] sm:text-[16px] text-[12px]"
+        className="text-[#111111] lg:max-w-[196px] min-h-[48px] md:max-w-[170px] sm:max-w-[170px] max-w-[130px] text-[16px] "
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

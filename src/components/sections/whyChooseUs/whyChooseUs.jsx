@@ -10,6 +10,8 @@ import image4 from "../../../images/sections/whyChooseUs/4.svg";
 import image5 from "../../../images/sections/whyChooseUs/5.svg";
 import image6 from "../../../images/sections/whyChooseUs/6.svg";
 import { useTranslation } from "react-i18next";
+
+
 export default function WhyChooseUs() {
   const { t } = useTranslation();
   const { ref, inView } = useInView({
@@ -109,3 +111,4 @@ export default function WhyChooseUs() {
     </section>
   );
 }
+
