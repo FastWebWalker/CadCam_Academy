@@ -46,15 +46,31 @@ export default function Questions() {
           inView={true}
         />
         <div className="w-full mx-auto mt-10">
-          {questionsData.map((item, index) => (
-            <QuestionItem
-              key={index}
-              question={item.question}
-              answer={item.answer}
-              isOpen={openIndex === index}
-              onClick={() => handleToggle(index)}
-            />
-          ))}
+          {questionsData.map((item, index, arr) => {
+            if (index === arr.length - 1) {
+              return (
+                <QuestionItem
+                  key={index}
+                  question={item.question}
+                  answer={item.answer}
+                  isBorder={false}
+                  isOpen={openIndex === index}
+                  onClick={() => handleToggle(index)}
+                />
+              );
+            } else {
+              return (
+                <QuestionItem
+                  key={index}
+                  isBorder={true}
+                  question={item.question}
+                  answer={item.answer}
+                  isOpen={openIndex === index}
+                  onClick={() => handleToggle(index)}
+                />
+              );
+            }
+          })}
         </div>
       </ContentContainer>
     </section>
