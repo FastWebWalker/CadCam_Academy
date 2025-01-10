@@ -176,9 +176,9 @@ export default function MainTitleBlock() {
           <div
             className={`flex  ${
               i18n.language === "en"
-                ? "justify-start"
-                : "lg:justify-end justify-start"
-            } items-center pl-[15%]`}>
+                ? "justify-start pl-[15%]"
+                : "lg:justify-end justify-start pr-[15%]"
+            } items-center `}>
             <motion.div variants={textVariants}>
               <HeroTitle>
                 {i18n.language === "en" ? (
