@@ -25,7 +25,7 @@ export default function EquipmentItem({ image, title }) {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6 }}>
-      <div className="w-[257px] h-auto">
+      <div className="sm:w-[257px] w-[60vw] h-auto">
         <img src={image} alt={title} />
       </div>
       <h3 className="text-[24px]">{title}</h3>

@@ -80,7 +80,7 @@ export default function OurEquipment() {
     <section
       id="equipment"
       className="bg-white py-[6.75vh] text-[#111111] relative z-[1]">
-      <div className="absolute bottom-0 right-0 opacity-100 z-[0]">
+      <div className="absolute bottom-0 right-0 opacity-100 sm:z-[0] z-[-1]">
         <img src={background} alt="background" />
       </div>
 
