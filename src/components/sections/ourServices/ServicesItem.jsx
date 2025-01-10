@@ -39,6 +39,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Description from "../../UI/Description";
+import i18n from "i18next";
 
 const ServicesItem = ({ number, title, description, image }) => {
   return (
@@ -75,7 +76,9 @@ const ServicesItem = ({ number, title, description, image }) => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="lg:text-[44px] md:text-[36px] text-[24px] font-normal text-[#111111] md:w-[25%]">
+          className={`lg:text-[44px] md:text-[36px] text-[24px] font-normal text-[#111111] ${
+            i18n.language === "en" ? " md:w-[25%]" : "md:w-[40%]"
+          }`}>
           {title}
         </motion.h2>
 

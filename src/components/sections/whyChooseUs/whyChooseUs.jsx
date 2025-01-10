@@ -11,16 +11,18 @@ import image5 from "../../../images/sections/whyChooseUs/5.svg";
 import image6 from "../../../images/sections/whyChooseUs/6.svg";
 import { useTranslation } from "react-i18next";
 
-
 export default function WhyChooseUs() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
   return (
-    <section id="whyWe" className="relative bg-[#111111] text-white py-[6.75vh]" ref={ref}>
+    <section
+      id="whyWe"
+      className="relative bg-[#111111] text-white py-[6.75vh]"
+      ref={ref}>
       <ContentContainer>
         <SectionHeader
           titleFirstPart={t("chooseSection.title1")}
@@ -28,7 +30,12 @@ export default function WhyChooseUs() {
           description={t("chooseSection.subtitle")}
           isDescription={true}
           inView={inView}
-          titlePl={"lg:pl-[25%]"}
+          titlePl={`${
+            i18n.language === "en"
+              ? "lg:pl-[25%]"
+              : "[@media(min-width:1350px)]:pl-[25%]"
+          }`}
+          isLongDescription={true}
           textIsWhite={true}
         />
 
@@ -111,4 +118,3 @@ export default function WhyChooseUs() {
     </section>
   );
 }
-

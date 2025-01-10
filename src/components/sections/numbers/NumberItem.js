@@ -49,9 +49,9 @@ export default function NumberItem({ title, description, className }) {
       ref={ref}
       whileHover={{ scale: 1.05 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      className={` flex flex-col gap-4 xl:min-w-[260px] min-w-[50%] justify-center ${className}`}>
+      className={` flex flex-col gap-4 xl:min-w-[260px] min-w-[50%] min-h-[100%] justify-center ${className}`}>
       <motion.h2
-        className="lg:text-[80px] md:text-[40px] text-[34px] text-[#111111]"
+        className="lg:text-[80px] md:text-[40px] text-[10vw] text-[#111111]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}>
@@ -79,7 +79,7 @@ export default function NumberItem({ title, description, className }) {
         </div>
       </motion.h2>
       <motion.p
-        className="text-[#111111] lg:max-w-[196px] min-h-[48px] md:max-w-[170px] sm:max-w-[170px] max-w-[130px] text-[16px] "
+        className="text-[#111111] lg:max-w-[196px] min-h-[72px] md:max-w-[170px] sm:max-w-[170px] max-w-[130px] text-[16px] "
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

@@ -58,14 +58,14 @@ const DescriptionPart = () => {
 };
 
 export default function OurGallery() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <section id="gallery" className="bg-white text-[#111111] py-[6.75vh]">
       <ContentContainer>
         <SectionHeader
           titleFirstPart={t("ourGallery.title1")}
           titleSecondPart={t("ourGallery.title2")}
-          titlePl={"lg:pl-[40%]"}
+          titlePl={`${i18n.language === "en" ? "lg:pl-[40%]" : "lg:pl-[15%]"}`}
           isDescription={false}
           descriptionPart={<DescriptionPart />}
           inView={true}

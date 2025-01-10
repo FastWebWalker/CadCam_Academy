@@ -41,7 +41,7 @@ export default function OurEquipment() {
   const isTablet = useMediaQuery("(min-width: 650px) and (max-width: 768px)");
   const isMobile = useMediaQuery("(max-width: 649px)");
   const isMobileSmall = useMediaQuery("(max-width: 400px");
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const slidesPerView = isTablet ? 2.5 : isMobile ? 1.5 : isMobileSmall && 1;
 
@@ -91,7 +91,12 @@ export default function OurEquipment() {
           isDescription={false}
           descriptionPart={<DescriptionPart />}
           textIsWhite={false}
-          titlePl={"lg:pl-[20%]"}
+          titlePl={`${
+            i18n.language === "en"
+              ? "lg:pl-[20%]"
+              : "[@media(min-width:1350px)]:pl-[20%]"
+          }`}
+          isLongDescription={true}
           inView={true}
         />
         {isDesktop && (

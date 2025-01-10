@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 
 export default function Questions() {
   const [openIndex, setOpenIndex] = useState(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const questionsData = [
     {
@@ -40,7 +40,12 @@ export default function Questions() {
         <SectionHeader
           titleFirstPart={t("faq.title1")}
           titleSecondPart={t("faq.title2")}
-          titlePl={"lg:pl-[20%]"}
+          titlePl={`${
+            i18n.language === "en"
+              ? "lg:pl-[20%]"
+              : "[@media(min-width:1350px)]:pl-[20%]"
+          }`}
+          isLongDescription={true}
           isDescription={true}
           description={t("faq.subtitle")}
           inView={true}

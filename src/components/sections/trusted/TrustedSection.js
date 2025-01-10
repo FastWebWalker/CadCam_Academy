@@ -7,7 +7,7 @@ import { useState } from "react";
 import SectionHeader from "../../UI/SectionHeader";
 
 export default function TrustedSection() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   // Animation variants for the whole section
   const sectionVariants = {
@@ -45,8 +45,13 @@ export default function TrustedSection() {
           isDescription={true}
           description={t("trustedSection.description")}
           inView={inView}
-          titlePl={"lg:pl-[40%]"}
+          titlePl={`${
+            i18n.language === "en"
+              ? "lg:pl-[40%]"
+              : "[@media(min-width:1350px)]:pl-[40%]"
+          }`}
           textIsWhite={true}
+          isLongDescription={true}
         />
 
         {/* Continuous Carousel */}
