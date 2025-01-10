@@ -59,7 +59,7 @@ export default function Footer() {
               </Description>
             </div>
             <div className="flex flex-col gap-[32px] justify-start md:items-end items-start">
-              <Description className="text-[20px] text-white max-w-[510px] text-right">
+              <Description className="text-[20px] text-white max-w-[510px] sm:text-right text-left">
                 {t("footerSection.contactUs")}
               </Description>
               <div className="flex-grow-0">
