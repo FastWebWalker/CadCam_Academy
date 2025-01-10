@@ -4,7 +4,8 @@ import en from "./en/en.json";
 import ua from "./ua/ua.json";
 
 const SUPPORTED_LANGUAGES = ["en", "ua"];
-let lng = localStorage.getItem("i18nextLng");
+const DEFAULT_LANGUAGE = "ua"; // Set the default language here
+let lng = localStorage.getItem("i18nextLng") || "ua";
 
 if (!lng) {
   const browserLanguage = navigator.language.slice(0, 2);
@@ -17,14 +18,14 @@ if (!lng) {
   } else if (browserLanguages.includes("en")) {
     lng = "en";
   } else {
-    lng = "en";
+    lng = DEFAULT_LANGUAGE; // Use the default language here
   }
   localStorage.setItem("i18nextLng", lng);
 }
 
 i18n.use(initReactI18next).init({
   lng: lng,
-  fallbackLng: "ua",
+  fallbackLng: DEFAULT_LANGUAGE, // Set the fallback language here
   resources: {
     en: {
       translation: en,
