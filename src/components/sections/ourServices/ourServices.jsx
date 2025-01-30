@@ -21,7 +21,7 @@ const DescriptionPart = () => {
         <Button
           variant="outline-black"
           href={
-            "https://drive.google.com/file/d/1qTz38WGu5gwCuUvRUR5XcR6r4S64R2tr/view"
+            "https://drive.google.com/file/d/1bMijMT2zQstrwSZ_ZHilFIev7pEMIxqt/view?usp=sharing"
           }>
           {t("buttons.getAPrice")}
         </Button>
